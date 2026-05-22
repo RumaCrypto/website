@@ -30,12 +30,12 @@ export default function LanguageSelector({
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-4 py-2 bg-surface rounded-full hover:bg-accent transition-colors cursor-pointer"
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-[#71717a] hover:text-[#fafafa] hover:bg-[#18181b] border border-transparent hover:border-[#27272a] transition-all duration-200 cursor-pointer"
       >
         <span>{currentLang?.flag}</span>
         <span className="font-medium">{currentLang?.code.toUpperCase()}</span>
         <svg
-          className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
+          className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -50,12 +50,12 @@ export default function LanguageSelector({
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-secondary border border-accent rounded-lg shadow-lg overflow-hidden z-50 bg-white">
+        <div className="absolute top-full mt-2 right-0 bg-[#18181b] border border-[#27272a] rounded-xl shadow-2xl overflow-hidden z-50 min-w-[140px]">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className="w-full px-4 py-3 text-left hover:bg-surface transition-colors flex items-center gap-3 cursor-pointer"
+              className="w-full px-4 py-2.5 text-left text-sm hover:bg-[#27272a] transition-colors duration-150 flex items-center gap-3 text-[#a1a1aa] hover:text-[#fafafa] cursor-pointer"
             >
               <span>{lang.flag}</span>
               <span>{lang.name}</span>

@@ -1,23 +1,77 @@
 {
   "metadata": {
-    "title": "Ruma - Carteira cripto simples",
-    "description": "A carteira cripto com autocustódia mais fácil de usar"
+    "title": "Ruma — Carteira Cripto Simples",
+    "description": "A carteira de autocustódia mais fácil. Sem complexidade, sem confusão — só o seu dinheiro, seu controle."
+  },
+  "nav": {
+    "features": "Funcionalidades",
+    "how_it_works": "Como funciona",
+    "security": "Segurança",
+    "cta": "Entrar na lista"
   },
   "hero": {
-    "1": {
-      "title": "Sabemos que isso pode ser difícil",
-      "subtitle": "Cripto, blockchain, web3, autocustódia. Todos esses termos são novos e parecem muito diferentes dos serviços bancários tradicionais, e são!"
-    },
-    "2": {
-      "title": "Você precisa de uma maneira simples",
-      "subtitle": "É por isso que criamos o Ruma, para que você possa aproveitar as vantagens deste sistema monetário muito mais eficiente."
-    },
-    "3": {
-      "title": "Sua entrada para um mundo cripto",
-      "subtitle": "A carteira Ethereum mais fácil de usar",
-      "cta": "Receba as notícias primeiro",
-      "cta-placeholder": "Receba as notícias primeiro",
-      "thank_you": "Obrigado por se inscrever!"
-    }
+    "badge": "Carteira de Autocustódia",
+    "title_1": "Cripto feito",
+    "title_2": "simples para todos",
+    "subtitle": "A carteira de autocustódia mais fácil. Sem complexidade, sem confusão — só o seu dinheiro, seu controle.",
+    "cta": "Entrar na Lista",
+    "placeholder": "Digite seu e-mail",
+    "thank_you": "Você está na lista! Entraremos em contato em breve.",
+    "social_proof": "Junte-se a mais de 2.000 pessoas já na lista"
+  },
+  "features": {
+    "badge": "Funcionalidades",
+    "title": "Tudo que você precisa para ter cripto",
+    "subtitle": "O Ruma elimina a complexidade do cripto para você focar no que importa.",
+    "1_title": "Configuração Simples",
+    "1_desc": "Comece em minutos com nosso processo guiado. Nenhum conhecimento técnico necessário.",
+    "2_title": "Autocustódia",
+    "2_desc": "Suas chaves, seu cripto. Nunca guardamos seus ativos — você mantém o controle total.",
+    "3_title": "Multi-Rede",
+    "3_desc": "Gerencie Bitcoin, Ethereum e mais em uma única interface linda."
+  },
+  "how_it_works": {
+    "badge": "Como Funciona",
+    "title": "Três passos para o cripto",
+    "subtitle": "Do zero a ter cripto em minutos.",
+    "1_title": "Baixe o Ruma",
+    "1_desc": "Instale o app no seu dispositivo iOS ou Android. Disponível em ambas as lojas.",
+    "2_title": "Crie sua Carteira",
+    "2_desc": "Configure sua carteira com nosso fluxo guiado. Explicamos cada passo claramente.",
+    "3_title": "Comece a Usar Cripto",
+    "3_desc": "Envie, receba e guarde cripto tão facilmente quanto enviar uma mensagem de texto."
+  },
+  "testimonials": {
+    "badge": "Depoimentos",
+    "title": "Amado pelos primeiros usuários",
+    "1_quote": "Tentei três outras carteiras e desisti. O Ruma foi a primeira que realmente entendi.",
+    "1_name": "Maria G.",
+    "1_role": "Freelancer",
+    "2_quote": "Finalmente uma carteira cripto que minha mãe poderia usar. O processo de configuração é brilhante.",
+    "2_name": "Carlos R.",
+    "2_role": "Engenheiro de Software",
+    "3_quote": "A simplicidade não compromete a segurança. Isso é incrivelmente raro neste espaço.",
+    "3_name": "Priya K.",
+    "3_role": "Designer UX"
+  },
+  "waitlist": {
+    "badge": "Acesso Antecipado",
+    "title": "Seja o primeiro a usar o Ruma",
+    "subtitle": "Entre na lista de espera e tenha acesso antecipado quando lançarmos.",
+    "cta": "Entrar na Lista",
+    "placeholder": "Digite seu e-mail",
+    "thank_you": "Você está na lista! Entraremos em contato em breve."
+  },
+  "footer": {
+    "tagline": "Seu caminho para o mundo cripto.",
+    "links_product": "Produto",
+    "link_features": "Funcionalidades",
+    "link_security": "Segurança",
+    "link_how": "Como Funciona",
+    "links_company": "Empresa",
+    "link_about": "Sobre",
+    "link_blog": "Blog",
+    "link_contact": "Contato",
+    "copyright": "© 2025 Ruma. Todos os direitos reservados."
   }
 }

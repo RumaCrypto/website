@@ -1,23 +1,77 @@
 {
   "metadata": {
-    "title": "Ruma - Billetera cripto simple",
-    "description": "La billetera de autocustodia cripto más fácil"
+    "title": "Ruma — Billetera Cripto Simple",
+    "description": "La billetera de autocustodia más fácil. Sin complejidad, sin confusión — solo tu dinero, tu control."
+  },
+  "nav": {
+    "features": "Funciones",
+    "how_it_works": "Cómo funciona",
+    "security": "Seguridad",
+    "cta": "Únete a la lista"
   },
   "hero": {
-    "1": {
-      "title": "Sabemos que esto puede ser difícil",
-      "subtitle": "Crypto, blockchain, web3, auto custodia. Todos estos términos son nuevos y se siente muy distinto a la banca tradicional, ¡y lo es!"
-    },
-    "2": {
-      "title": "Necesitas una forma sencilla y segura de tener cripto",
-      "subtitle": "Por eso creamos Ruma, para que puedas aprovechar las ventajas de este sistema monetario mucho más eficiente."
-    },
-    "3": {
-      "title": "Tu camino de entrada a cripto",
-      "subtitle": "La billetera cripto más fácil de usar",
-      "cta": "Obtener noticias primero",
-      "cta-placeholder": "Recibe noticias primero",
-      "thank_you": "¡Gracias por registrarse!"
-    }
+    "badge": "Billetera de Autocustodia",
+    "title_1": "Cripto hecho",
+    "title_2": "simple para todos",
+    "subtitle": "La billetera de autocustodia más fácil. Sin complejidad, sin confusión — solo tu dinero, tu control.",
+    "cta": "Únete a la lista",
+    "placeholder": "Ingresa tu correo",
+    "thank_you": "¡Estás en la lista! Te contactaremos pronto.",
+    "social_proof": "Únete a más de 2,000 personas ya en la lista"
+  },
+  "features": {
+    "badge": "Funciones",
+    "title": "Todo lo que necesitas para tener cripto",
+    "subtitle": "Ruma elimina la complejidad del cripto para que puedas enfocarte en lo que importa.",
+    "1_title": "Configuración Simple",
+    "1_desc": "Comienza en minutos con nuestro proceso guiado. No se requieren conocimientos técnicos.",
+    "2_title": "Autocustodia",
+    "2_desc": "Tus llaves, tu cripto. Nunca tenemos tus activos — tú mantienes el control total.",
+    "3_title": "Multi-Cadena",
+    "3_desc": "Gestiona Bitcoin, Ethereum y más desde una sola interfaz hermosa."
+  },
+  "how_it_works": {
+    "badge": "Cómo Funciona",
+    "title": "Tres pasos al cripto",
+    "subtitle": "De cero a tener cripto en minutos.",
+    "1_title": "Descarga Ruma",
+    "1_desc": "Instala la app en tu dispositivo iOS o Android. Disponible en ambas tiendas.",
+    "2_title": "Crea tu Billetera",
+    "2_desc": "Configura tu billetera con nuestro flujo guiado. Explicamos cada paso claramente.",
+    "3_title": "Comienza a Usar Cripto",
+    "3_desc": "Envía, recibe y almacena cripto tan fácilmente como enviar un mensaje de texto."
+  },
+  "testimonials": {
+    "badge": "Testimonios",
+    "title": "Amado por los primeros usuarios",
+    "1_quote": "Probé tres billeteras y me rendí. Ruma fue la primera que realmente entendí.",
+    "1_name": "Maria G.",
+    "1_role": "Freelancer",
+    "2_quote": "Por fin una billetera cripto que mi mamá podría usar. El proceso de configuración es brillante.",
+    "2_name": "Carlos R.",
+    "2_role": "Ingeniero de Software",
+    "3_quote": "La simplicidad no compromete la seguridad. Eso es increíblemente raro en este espacio.",
+    "3_name": "Priya K.",
+    "3_role": "Diseñadora UX"
+  },
+  "waitlist": {
+    "badge": "Acceso Anticipado",
+    "title": "Sé el primero en probar Ruma",
+    "subtitle": "Únete a la lista de espera y obtén acceso anticipado cuando lancemos.",
+    "cta": "Únete a la lista",
+    "placeholder": "Ingresa tu correo",
+    "thank_you": "¡Estás en la lista! Te contactaremos pronto."
+  },
+  "footer": {
+    "tagline": "Tu camino al mundo cripto.",
+    "links_product": "Producto",
+    "link_features": "Funciones",
+    "link_security": "Seguridad",
+    "link_how": "Cómo Funciona",
+    "links_company": "Empresa",
+    "link_about": "Nosotros",
+    "link_blog": "Blog",
+    "link_contact": "Contacto",
+    "copyright": "© 2025 Ruma. Todos los derechos reservados."
   }
 }

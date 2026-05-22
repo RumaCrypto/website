@@ -1,22 +1,77 @@
 {
   "metadata": {
-    "title": "Ruma - Simple crypto wallet",
-    "description": "The easiest self-custody crypto wallet"
+    "title": "Ruma — Simple Crypto Wallet",
+    "description": "The easiest self-custody crypto wallet. No complexity, no confusion — just your money, your control."
+  },
+  "nav": {
+    "features": "Features",
+    "how_it_works": "How it works",
+    "security": "Security",
+    "cta": "Join Waitlist"
   },
   "hero": {
-    "1": {
-      "title": "We know this can feel scary",
-      "subtitle": "Crypto, blockchain, web3. All of these words are probably new for you or feel like something different from traditional banking, and it is!"
-    },
-    "2": {
-      "title": "You need a simple way to use crypto",
-      "subtitle": "That's why we created Ruma, so you can learn and use a more efficient money system."
-    },
-    "3": {
-      "title": "Your path into the crypto world",
-      "subtitle": "The easiest to use crypto wallet",
-      "cta": "Get the news first",
-      "thank_you": "Thank you for signing up!"
-    }
+    "badge": "Self-Custody Wallet",
+    "title_1": "Crypto made",
+    "title_2": "simple for everyone",
+    "subtitle": "The easiest self-custody wallet. No complexity, no confusion — just your money, your control.",
+    "cta": "Join the Waitlist",
+    "placeholder": "Enter your email",
+    "thank_you": "You're on the list! We'll be in touch soon.",
+    "social_proof": "Join 2,000+ people already on the waitlist"
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Everything you need to hold crypto",
+    "subtitle": "Ruma takes the complexity out of crypto so you can focus on what matters.",
+    "1_title": "Simple Setup",
+    "1_desc": "Get started in minutes with our guided onboarding. No technical knowledge required.",
+    "2_title": "Self-Custody",
+    "2_desc": "Your keys, your crypto. We never hold your assets — you stay in full control.",
+    "3_title": "Multi-Chain",
+    "3_desc": "Manage Bitcoin, Ethereum, and more from a single, beautiful interface."
+  },
+  "how_it_works": {
+    "badge": "How It Works",
+    "title": "Three steps to crypto",
+    "subtitle": "From zero to holding crypto in minutes.",
+    "1_title": "Download Ruma",
+    "1_desc": "Install the app on your iOS or Android device. Available on both app stores.",
+    "2_title": "Create Your Wallet",
+    "2_desc": "Set up your wallet with our guided flow. We explain every step clearly.",
+    "3_title": "Start Using Crypto",
+    "3_desc": "Send, receive, and store crypto as easily as sending a text message."
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "Loved by early users",
+    "1_quote": "I tried three other wallets and gave up. Ruma was the first one I actually understood.",
+    "1_name": "Maria G.",
+    "1_role": "Freelancer",
+    "2_quote": "Finally a crypto wallet my mom could actually use. The onboarding is brilliant.",
+    "2_name": "Carlos R.",
+    "2_role": "Software Engineer",
+    "3_quote": "The simplicity doesn't compromise security. That's incredibly rare in this space.",
+    "3_name": "Priya K.",
+    "3_role": "UX Designer"
+  },
+  "waitlist": {
+    "badge": "Early Access",
+    "title": "Be first to try Ruma",
+    "subtitle": "Join the waitlist and get early access when we launch.",
+    "cta": "Join Waitlist",
+    "placeholder": "Enter your email",
+    "thank_you": "You're on the list! We'll be in touch soon."
+  },
+  "footer": {
+    "tagline": "Your path into the crypto world.",
+    "links_product": "Product",
+    "link_features": "Features",
+    "link_security": "Security",
+    "link_how": "How It Works",
+    "links_company": "Company",
+    "link_about": "About",
+    "link_blog": "Blog",
+    "link_contact": "Contact",
+    "copyright": "© 2025 Ruma. All rights reserved."
   }
 }

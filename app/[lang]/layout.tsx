@@ -1,10 +1,8 @@
-import LanguageSelector from "@/components/LanguageSelector";
 import "../globals.css";
 import { Metadata } from "next";
 import { getDictionary, Locale } from "./dictionaries";
 import { TranslationsProvider } from "@/context/translations/TranslationsContext";
 import { ReactLenis } from "lenis/react";
-import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -32,16 +30,6 @@ export default async function RootLayout({
       <body>
         <ReactLenis root>
           <TranslationsProvider dictionary={dictionary}>
-            <header className="fixed top-0 z-50 p-6 flex justify-between lg:justify-end left-0 lg:right-0 w-full">
-              <Image
-                src="/logo-full.svg"
-                alt="Logo"
-                width={48}
-                height={48}
-                className="w-auto h-12 lg:hidden"
-              />
-              <LanguageSelector currentLocale={lang} />
-            </header>
             {children}
           </TranslationsProvider>
         </ReactLenis>
