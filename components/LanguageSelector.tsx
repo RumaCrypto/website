@@ -4,10 +4,14 @@ import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
 const languages = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "es", name: "Español", flag: "🇪🇸" },
-  { code: "pt", name: "Português", flag: "🇧🇷" },
+  { code: "en", name: "English"},
+  { code: "es", name: "Español"},
+  { code: "pt", name: "Português"},
 ];
+
+const GlobeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-5 h-5" stroke="currentColor" strokeWidth={1.5} stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+)
 
 export default function LanguageSelector({
   currentLocale,
@@ -32,7 +36,7 @@ export default function LanguageSelector({
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-muted hover:text-text hover:bg-surface border border-transparent hover:border-border transition-all duration-200 cursor-pointer"
       >
-        <span>{currentLang?.flag}</span>
+        <GlobeIcon/>
         <span className="font-medium">{currentLang?.code.toUpperCase()}</span>
         <svg
           className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
@@ -57,7 +61,7 @@ export default function LanguageSelector({
               onClick={() => handleLanguageChange(lang.code)}
               className="w-full px-4 py-2.5 text-left text-sm hover:bg-border transition-colors duration-150 flex items-center gap-3 text-[#a1a1aa] hover:text-text cursor-pointer"
             >
-              <span>{lang.flag}</span>
+              <span>{lang.code}</span>
               <span>{lang.name}</span>
             </button>
           ))}

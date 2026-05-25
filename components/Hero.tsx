@@ -50,7 +50,7 @@ export default function Hero({ lang }: { lang: string }) {
         <motion.h1
           variants={fadeUp}
           transition={{ duration: 0.55, ease: easing }}
-          className="text-7xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-[1.07] mb-6"
+          className="text-6xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-[1.07] mb-6"
         >
           <span className="text-text">{t("title_1")}</span>
           <br />

@@ -53,27 +53,28 @@ export default function Navbar({ lang }: { lang: string }) {
             alt="Ruma"
             width={80}
             height={32}
-            className="h-8 w-auto hidden dark:block"
+            className="h-7 w-auto hidden dark:block"
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-muted hover:text-text transition-colors duration-200"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
         <div className="flex items-center gap-3">
+
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted hover:text-text transition-colors duration-200"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
           <LanguageSelector currentLocale={lang} />
           <a
             href="#waitlist"
-            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
           >
             {t("cta")}
           </a>
