@@ -34,8 +34,8 @@ export default function Hero({ lang }: { lang: string }) {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-gray-400 opacity-[0.08] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-[#0057ff] opacity-[0.07] blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-125 h-125 rounded-full bg-muted opacity-[0.08] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-100 h-100 rounded-full bg-accent opacity-[0.07] blur-[100px] pointer-events-none" />
 
       <motion.div
         className="relative z-10 max-w-3xl mx-auto px-6 text-center"
@@ -52,9 +52,9 @@ export default function Hero({ lang }: { lang: string }) {
           transition={{ duration: 0.55, ease: easing }}
           className="text-5xl sm:text-6xl md:text-[4.5rem] font-bold tracking-tight leading-[1.07] mb-6"
         >
-          <span className="text-[#fafafa]">{t("title_1")}</span>
+          <span className="text-text">{t("title_1")}</span>
           <br />
-          <span className="bg-gradient-to-r from-[#0057ff] via-[#3a7cff] to-[#3b82f6] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-accent via-[#3a7cff] to-accent-hover bg-clip-text text-transparent">
             {t("title_2")}
           </span>
         </motion.h1>
@@ -63,7 +63,7 @@ export default function Hero({ lang }: { lang: string }) {
         <motion.p
           variants={fadeUp}
           transition={{ duration: 0.55, ease: easing }}
-          className="text-lg text-[#71717a] max-w-xl mx-auto mb-10 leading-relaxed"
+          className="text-lg text-muted max-w-xl mx-auto mb-10 leading-relaxed"
         >
           {t("subtitle")}
         </motion.p>
@@ -74,7 +74,7 @@ export default function Hero({ lang }: { lang: string }) {
           transition={{ duration: 0.55, ease: easing }}
         >
           {submitted ? (
-            <div className="inline-flex items-center gap-2 text-[#0057ff] font-medium">
+            <div className="inline-flex items-center gap-2 text-accent font-medium">
               <svg
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -99,19 +99,19 @@ export default function Hero({ lang }: { lang: string }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("placeholder")}
-                className="flex-1 px-4 py-3 rounded-xl bg-[#18181b] border border-[#27272a] text-[#fafafa] placeholder-[#52525b] text-sm focus:outline-none focus:border-[#0057ff] transition-colors duration-200"
+                className="flex-1 px-4 py-3 rounded-xl bg-surface border border-border text-text placeholder-subtle text-sm focus:outline-none focus:border-accent transition-colors duration-200"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className="px-6 py-3 rounded-xl bg-[#0057ff] hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
+                className="px-6 py-3 rounded-xl bg-accent hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
               >
                 {loading ? "..." : t("cta")}
               </button>
             </form>
           )}
 
-          <p className="mt-4 text-xs text-[#52525b]">{t("social_proof")}</p>
+          <p className="mt-4 text-xs text-subtle">{t("social_proof")}</p>
         </motion.div>
       </motion.div>
     </section>

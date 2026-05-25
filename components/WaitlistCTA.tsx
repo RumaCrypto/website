@@ -30,32 +30,32 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
   return (
     <section id="waitlist" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="h-px bg-gradient-to-r from-transparent via-[#27272a] to-transparent mb-28" />
+        <div className="h-px bg-linear-to-r from-transparent via-border to-transparent mb-28" />
 
         <motion.div
           ref={ref}
-          className="relative rounded-3xl overflow-hidden border border-[#27272a] bg-[#18181b] p-12 md:p-20 text-center"
+          className="relative rounded-3xl overflow-hidden border border-border bg-surface p-12 md:p-20 text-center"
           initial={{ opacity: 0, y: 32 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: easing }}
         >
           {/* Background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#0057ff] opacity-[0.06] blur-[80px] pointer-events-none rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent opacity-[0.06] blur-[80px] pointer-events-none rounded-full" />
 
           <div className="relative">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#09090b] text-[#0057ff] mb-6">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-border bg-background text-accent mb-6">
               {t("badge")}
             </span>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-4 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-text mb-4 tracking-tight">
               {t("title")}
             </h2>
-            <p className="text-[#71717a] max-w-md mx-auto mb-10 leading-relaxed">
+            <p className="text-muted max-w-md mx-auto mb-10 leading-relaxed">
               {t("subtitle")}
             </p>
 
             {submitted ? (
-              <div className="inline-flex items-center gap-2 text-[#0057ff] font-medium">
+              <div className="inline-flex items-center gap-2 text-accent font-medium">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                   <path
                     fillRule="evenodd"
@@ -76,12 +76,12 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={t("placeholder")}
-                  className="flex-1 px-4 py-3 rounded-xl bg-[#09090b] border border-[#27272a] text-[#fafafa] placeholder-[#52525b] text-sm focus:outline-none focus:border-[#8b5cf6] transition-colors duration-200"
+                  className="flex-1 px-4 py-3 rounded-xl bg-background border border-border text-text placeholder-subtle text-sm focus:outline-none focus:border-accent transition-colors duration-200"
                 />
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-3 rounded-xl bg-[#0057ff] hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
+                  className="px-6 py-3 rounded-xl bg-accent hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
                 >
                   {loading ? "..." : t("cta")}
                 </button>

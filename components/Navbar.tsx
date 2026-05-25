@@ -29,7 +29,7 @@ export default function Navbar({ lang }: { lang: string }) {
     >
       <motion.div
         style={{ opacity: borderOpacity }}
-        className="absolute bottom-0 left-0 right-0 h-px bg-[#27272a]"
+        className="absolute bottom-0 left-0 right-0 h-px bg-border"
       />
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center">
@@ -47,7 +47,7 @@ export default function Navbar({ lang }: { lang: string }) {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-[#71717a] hover:text-[#fafafa] transition-colors duration-200"
+              className="text-sm text-muted hover:text-text transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -58,7 +58,7 @@ export default function Navbar({ lang }: { lang: string }) {
           <LanguageSelector currentLocale={lang} />
           <a
             href="#waitlist"
-            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-[#0057ff] text-white hover:bg-[#3a7cff] transition-colors duration-200"
+            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
           >
             {t("cta")}
           </a>
