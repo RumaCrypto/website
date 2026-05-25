@@ -33,6 +33,18 @@ export default function Hero({ lang }: { lang: string }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
 
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/hero.mp4"
+      />
+      {/* Overlay for legibility */}
+      <div className="absolute inset-0 bg-background/75" />
+
       {/* Gradient orbs */}
       <div className="absolute top-1/3 left-1/4 w-125 h-125 rounded-full bg-muted opacity-[0.08] blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/3 right-1/4 w-100 h-100 rounded-full bg-accent opacity-[0.07] blur-[100px] pointer-events-none" />

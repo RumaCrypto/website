@@ -84,7 +84,7 @@ export default function Footer({ lang }: { lang: string }) {
         <div className="h-px bg-border mb-8" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-subtle">{t("copyright")}</p>
+          <a className="text-xs text-subtle" href="https://www.pexels.com/es-es/video/impresionante-mirador-de-montana-con-un-grupo-de-personas-29886388/" target="_blank">Vídeo de Juan Castelblanco</a>
           {/* Social icons */}
           <div className="flex items-center gap-4">
             <a
