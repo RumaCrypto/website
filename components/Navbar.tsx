@@ -9,14 +9,15 @@ import LanguageSelector from "@/components/LanguageSelector";
 
 export default function Navbar({ lang }: { lang: string }) {
   const { scrollY } = useScroll();
-  const mq = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useState(mq.matches);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    setIsDark(mq.matches);
     const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
-  }, [mq]);
+  }, []);
 
   const darkBg = useTransform(scrollY, [0, 80], ["rgba(9,9,11,0)", "rgba(9,9,11,0.85)"]);
   const lightBg = useTransform(scrollY, [0, 80], ["rgba(255,255,255,0)", "rgba(255,255,255,0.85)"]);
@@ -39,7 +40,7 @@ export default function Navbar({ lang }: { lang: string }) {
         style={{ opacity: borderOpacity }}
         className="absolute bottom-0 left-0 right-0 h-px bg-border"
       />
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-2 md:px-6 h-16 flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center">
           <Image
             src="/logo-full.svg"

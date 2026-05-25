@@ -16,19 +16,8 @@
   font-display: swap;
 }
 
+/* Static design tokens (not theme-switchable) */
 @theme {
-  --color-background: #09090b;
-  --color-surface: #18181b;
-  --color-surface-2: #1f1f23;
-  --color-border: #27272a;
-  --color-text: #fafafa;
-  --color-muted: #fafafa;
-  --color-subtle: #52525b;
-  --color-accent: #0057ff;
-  --color-accent-hover: #3b82f6;
-  --color-accent-dim: rgba(139, 92, 246, 0.12);
-  --color-blue: #3b82f6;
-
   --font-sans: "Garet Book", system-ui, sans-serif;
   --font-display: "Garet Heavy", system-ui, sans-serif;
 
@@ -39,6 +28,48 @@
   --radius-2xl: 1.5rem;
 }
 
+/* Color CSS variables — dark by default, overridden for light */
+:root {
+  --bg: #09090b;
+  --surface: #18181b;
+  --surface-2: #1f1f23;
+  --border: #27272a;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --subtle: #52525b;
+  --accent: #0057ff;
+  --accent-hover: #3b82f6;
+  --accent-dim: rgba(139, 92, 246, 0.12);
+  --blue: #3b82f6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --surface: #f4f4f5;
+    --surface-2: #e4e4e7;
+    --border: #d4d4d8;
+    --text: #09090b;
+    --muted: #52525b;
+    --subtle: #a1a1aa;
+  }
+}
+
+/* Map CSS variables to Tailwind utilities via @theme inline */
+@theme inline {
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-dim: var(--accent-dim);
+  --color-blue: var(--blue);
+}
+
 *,
 *::before,
 *::after {
@@ -46,37 +77,22 @@
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: dark light;
   scroll-behavior: smooth;
-}
-
-body {
-  background-color: #09090b;
-  color: #fafafa;
-  font-family: "Garet Book", system-ui, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-color-scheme: light) {
   html {
     color-scheme: light;
   }
+}
 
-  body {
-    background-color: #ffffff;
-    color: #09090b;
-  }
-
-  :root {
-    --color-background: #ffffff;
-    --color-surface: #f4f4f5;
-    --color-surface-2: #e4e4e7;
-    --color-border: #d4d4d8;
-    --color-text: #09090b;
-    --color-muted: #52525b;
-    --color-subtle: #a1a1aa;
-  }
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Garet Book", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
