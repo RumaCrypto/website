@@ -1,5 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Garet Book";
+  src: url("/fonts/garet.book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garet Heavy";
+  src: url("/fonts/garet.heavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --color-background: #09090b;
@@ -7,14 +22,15 @@
   --color-surface-2: #1f1f23;
   --color-border: #27272a;
   --color-text: #fafafa;
-  --color-muted: #71717a;
+  --color-muted: #fafafa;
   --color-subtle: #52525b;
   --color-accent: #0057ff;
   --color-accent-hover: #3b82f6;
   --color-accent-dim: rgba(139, 92, 246, 0.12);
   --color-blue: #3b82f6;
 
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Garet Book", system-ui, sans-serif;
+  --font-display: "Garet Heavy", system-ui, sans-serif;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
@@ -37,9 +53,13 @@ html {
 body {
   background-color: #09090b;
   color: #fafafa;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Garet Book", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Garet Heavy", system-ui, sans-serif;
 }
 
 ::selection {

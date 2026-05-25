@@ -66,7 +66,7 @@ export default function Features() {
               className="group relative p-6 rounded-2xl bg-surface border border-border hover:border-accent/40 transition-colors duration-300 overflow-hidden"
             >
               {/* Subtle hover glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-transparent transition-all duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-linear-to-br from-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-transparent transition-all duration-500 rounded-2xl" />
 
               <div className="relative">
                 <div className="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5">
