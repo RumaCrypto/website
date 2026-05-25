@@ -58,6 +58,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #09090b;
+  }
+
+  :root {
+    --color-background: #ffffff;
+    --color-surface: #f4f4f5;
+    --color-surface-2: #e4e4e7;
+    --color-border: #d4d4d8;
+    --color-text: #09090b;
+    --color-muted: #52525b;
+    --color-subtle: #a1a1aa;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Garet Heavy", system-ui, sans-serif;
 }

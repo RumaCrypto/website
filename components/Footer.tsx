@@ -19,7 +19,14 @@ export default function Footer({ lang }: { lang: string }) {
                 alt="Ruma"
                 width={72}
                 height={28}
-                className="h-7 w-auto mb-3"
+                className="h-7 w-auto mb-3 dark:hidden"
+              />
+              <Image
+                src="/logo-full-white.svg"
+                alt="Ruma"
+                width={72}
+                height={28}
+                className="h-7 w-auto mb-3 hidden dark:block"
               />
             </Link>
             <p className="text-sm text-muted leading-relaxed max-w-xs">

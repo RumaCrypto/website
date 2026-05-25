@@ -3,16 +3,24 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import LanguageSelector from "@/components/LanguageSelector";
 
 export default function Navbar({ lang }: { lang: string }) {
   const { scrollY } = useScroll();
-  const bg = useTransform(
-    scrollY,
-    [0, 80],
-    ["rgba(9,9,11,0)", "rgba(9,9,11,0.85)"],
-  );
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const [isDark, setIsDark] = useState(mq.matches);
+
+  useEffect(() => {
+    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, [mq]);
+
+  const darkBg = useTransform(scrollY, [0, 80], ["rgba(9,9,11,0)", "rgba(9,9,11,0.85)"]);
+  const lightBg = useTransform(scrollY, [0, 80], ["rgba(255,255,255,0)", "rgba(255,255,255,0.85)"]);
+  const bg = isDark ? darkBg : lightBg;
   const borderOpacity = useTransform(scrollY, [0, 80], [0, 1]);
   const t = useTranslations("nav");
 
@@ -38,7 +46,14 @@ export default function Navbar({ lang }: { lang: string }) {
             alt="Ruma"
             width={80}
             height={32}
-            className="h-8 w-auto"
+            className="h-8 w-auto dark:hidden"
+          />
+          <Image
+            src="/logo-full-white.svg"
+            alt="Ruma"
+            width={80}
+            height={32}
+            className="h-8 w-auto hidden dark:block"
           />
         </Link>
 
