@@ -45,7 +45,7 @@ export default function Features() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, ease: easing }}
         >
-          <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#18181b] text-[#8b5cf6] mb-4">
+          <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#18181b] text-[#0057ff] mb-4">
             {t("badge")}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#fafafa] mb-4">
@@ -63,13 +63,13 @@ export default function Features() {
               initial={{ opacity: 0, y: 32 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.55, delay: i * 0.1, ease: easing }}
-              className="group relative p-6 rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-[#8b5cf6]/40 transition-colors duration-300 overflow-hidden"
+              className="group relative p-6 rounded-2xl bg-[#18181b] border border-[#27272a] hover:border-[#0057ff]/40 transition-colors duration-300 overflow-hidden"
             >
               {/* Subtle hover glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#8b5cf6]/0 to-[#8b5cf6]/0 group-hover:from-[#8b5cf6]/5 group-hover:to-transparent transition-all duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0057ff]/0 to-[#0057ff]/0 group-hover:from-[#0057ff]/5 group-hover:to-transparent transition-all duration-500 rounded-2xl" />
 
               <div className="relative">
-                <div className="w-10 h-10 rounded-xl bg-[#8b5cf6]/10 text-[#8b5cf6] flex items-center justify-center mb-5">
+                <div className="w-10 h-10 rounded-xl bg-[#0057ff]/10 text-[#0057ff] flex items-center justify-center mb-5">
                   <Icon />
                 </div>
                 <h3 className="font-semibold text-[#fafafa] mb-2 text-[0.9375rem]">

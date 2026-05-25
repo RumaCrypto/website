@@ -10,14 +10,13 @@
     "cta": "Join Waitlist"
   },
   "hero": {
-    "badge": "Self-Custody Wallet",
     "title_1": "Crypto made",
     "title_2": "simple for everyone",
     "subtitle": "The easiest self-custody wallet. No complexity, no confusion — just your money, your control.",
     "cta": "Join the Waitlist",
     "placeholder": "Enter your email",
     "thank_you": "You're on the list! We'll be in touch soon.",
-    "social_proof": "Join 2,000+ people already on the waitlist"
+    "social_proof": "We don't share your email with third parties"
   },
   "features": {
     "badge": "Features",
@@ -40,19 +39,6 @@
     "2_desc": "Set up your wallet with our guided flow. We explain every step clearly.",
     "3_title": "Start Using Crypto",
     "3_desc": "Send, receive, and store crypto as easily as sending a text message."
-  },
-  "testimonials": {
-    "badge": "Testimonials",
-    "title": "Loved by early users",
-    "1_quote": "I tried three other wallets and gave up. Ruma was the first one I actually understood.",
-    "1_name": "Maria G.",
-    "1_role": "Freelancer",
-    "2_quote": "Finally a crypto wallet my mom could actually use. The onboarding is brilliant.",
-    "2_name": "Carlos R.",
-    "2_role": "Software Engineer",
-    "3_quote": "The simplicity doesn't compromise security. That's incredibly rare in this space.",
-    "3_name": "Priya K.",
-    "3_role": "UX Designer"
   },
   "waitlist": {
     "badge": "Early Access",

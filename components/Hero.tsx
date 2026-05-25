@@ -32,19 +32,10 @@ export default function Hero({ lang }: { lang: string }) {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background grid */}
-      <div
-        className="absolute inset-0 opacity-[0.035]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#fafafa 1px, transparent 1px), linear-gradient(90deg, #fafafa 1px, transparent 1px)",
-          backgroundSize: "72px 72px",
-        }}
-      />
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-[#8b5cf6] opacity-[0.08] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-[#3b82f6] opacity-[0.07] blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-gray-400 opacity-[0.08] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-[#0057ff] opacity-[0.07] blur-[100px] pointer-events-none" />
 
       <motion.div
         className="relative z-10 max-w-3xl mx-auto px-6 text-center"
@@ -54,17 +45,6 @@ export default function Hero({ lang }: { lang: string }) {
           visible: { transition: { staggerChildren: 0.1 } },
         }}
       >
-        {/* Badge */}
-        <motion.div
-          variants={fadeUp}
-          transition={{ duration: 0.55, ease: easing }}
-          className="mb-7"
-        >
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#18181b] text-[#8b5cf6]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#8b5cf6] animate-pulse" />
-            {t("badge")}
-          </span>
-        </motion.div>
 
         {/* Headline */}
         <motion.h1
@@ -74,7 +54,7 @@ export default function Hero({ lang }: { lang: string }) {
         >
           <span className="text-[#fafafa]">{t("title_1")}</span>
           <br />
-          <span className="bg-gradient-to-r from-[#8b5cf6] via-[#a78bfa] to-[#3b82f6] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#0057ff] via-[#3a7cff] to-[#3b82f6] bg-clip-text text-transparent">
             {t("title_2")}
           </span>
         </motion.h1>
@@ -94,7 +74,7 @@ export default function Hero({ lang }: { lang: string }) {
           transition={{ duration: 0.55, ease: easing }}
         >
           {submitted ? (
-            <div className="inline-flex items-center gap-2 text-[#8b5cf6] font-medium">
+            <div className="inline-flex items-center gap-2 text-[#0057ff] font-medium">
               <svg
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -119,12 +99,12 @@ export default function Hero({ lang }: { lang: string }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("placeholder")}
-                className="flex-1 px-4 py-3 rounded-xl bg-[#18181b] border border-[#27272a] text-[#fafafa] placeholder-[#52525b] text-sm focus:outline-none focus:border-[#8b5cf6] transition-colors duration-200"
+                className="flex-1 px-4 py-3 rounded-xl bg-[#18181b] border border-[#27272a] text-[#fafafa] placeholder-[#52525b] text-sm focus:outline-none focus:border-[#0057ff] transition-colors duration-200"
               />
               <button
                 type="submit"
                 disabled={loading}
-                className="px-6 py-3 rounded-xl bg-[#8b5cf6] hover:bg-[#7c3aed] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
+                className="px-6 py-3 rounded-xl bg-[#0057ff] hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
               >
                 {loading ? "..." : t("cta")}
               </button>

@@ -28,7 +28,7 @@ export default function HowItWorks() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, ease: easing }}
         >
-          <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#18181b] text-[#8b5cf6] mb-4">
+          <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#18181b] text-[#0057ff] mb-4">
             {t("badge")}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-[#fafafa] mb-4">
@@ -41,7 +41,7 @@ export default function HowItWorks() {
 
         <div className="grid md:grid-cols-3 gap-10 md:gap-6 relative">
           {/* Connecting line on desktop */}
-          <div className="hidden md:block absolute top-8 left-[calc(16.66%+1.5rem)] right-[calc(16.66%+1.5rem)] h-px bg-gradient-to-r from-[#27272a] via-[#8b5cf6]/30 to-[#27272a]" />
+          <div className="hidden md:block absolute top-8 left-[calc(16.66%+1.5rem)] right-[calc(16.66%+1.5rem)] h-px bg-gradient-to-r from-[#27272a] via-[#0057ff]/30 to-[#27272a]" />
 
           {steps.map((step, i) => (
             <motion.div
@@ -53,8 +53,8 @@ export default function HowItWorks() {
             >
               {/* Step number */}
               <div className="relative w-16 h-16 rounded-full border border-[#27272a] bg-[#18181b] flex items-center justify-center mb-6 shrink-0">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#8b5cf6]/20 to-transparent" />
-                <span className="relative text-xl font-bold text-[#8b5cf6]">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#0057ff]/20 to-transparent" />
+                <span className="relative text-xl font-bold text-[#0057ff]">
                   {step}
                 </span>
               </div>

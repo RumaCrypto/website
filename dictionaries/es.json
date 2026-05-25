@@ -7,17 +7,16 @@
     "features": "Funciones",
     "how_it_works": "Cómo funciona",
     "security": "Seguridad",
-    "cta": "Únete a la lista"
+    "cta": "Recibir noticias"
   },
   "hero": {
-    "badge": "Billetera de Autocustodia",
     "title_1": "Cripto hecho",
     "title_2": "simple para todos",
     "subtitle": "La billetera de autocustodia más fácil. Sin complejidad, sin confusión — solo tu dinero, tu control.",
-    "cta": "Únete a la lista",
+    "cta": "Recibir noticias",
     "placeholder": "Ingresa tu correo",
     "thank_you": "¡Estás en la lista! Te contactaremos pronto.",
-    "social_proof": "Únete a más de 2,000 personas ya en la lista"
+    "social_proof": "No compartimos tu correo con terceros"
   },
   "features": {
     "badge": "Funciones",
@@ -41,24 +40,11 @@
     "3_title": "Comienza a Usar Cripto",
     "3_desc": "Envía, recibe y almacena cripto tan fácilmente como enviar un mensaje de texto."
   },
-  "testimonials": {
-    "badge": "Testimonios",
-    "title": "Amado por los primeros usuarios",
-    "1_quote": "Probé tres billeteras y me rendí. Ruma fue la primera que realmente entendí.",
-    "1_name": "Maria G.",
-    "1_role": "Freelancer",
-    "2_quote": "Por fin una billetera cripto que mi mamá podría usar. El proceso de configuración es brillante.",
-    "2_name": "Carlos R.",
-    "2_role": "Ingeniero de Software",
-    "3_quote": "La simplicidad no compromete la seguridad. Eso es increíblemente raro en este espacio.",
-    "3_name": "Priya K.",
-    "3_role": "Diseñadora UX"
-  },
   "waitlist": {
     "badge": "Acceso Anticipado",
     "title": "Sé el primero en probar Ruma",
     "subtitle": "Únete a la lista de espera y obtén acceso anticipado cuando lancemos.",
-    "cta": "Únete a la lista",
+    "cta": "Recibir noticias",
     "placeholder": "Ingresa tu correo",
     "thank_you": "¡Estás en la lista! Te contactaremos pronto."
   },

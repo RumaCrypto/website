@@ -58,7 +58,7 @@ export default function Navbar({ lang }: { lang: string }) {
           <LanguageSelector currentLocale={lang} />
           <a
             href="#waitlist"
-            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-[#8b5cf6] text-white hover:bg-[#7c3aed] transition-colors duration-200"
+            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-[#0057ff] text-white hover:bg-[#3a7cff] transition-colors duration-200"
           >
             {t("cta")}
           </a>

@@ -40,10 +40,10 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
           transition={{ duration: 0.6, ease: easing }}
         >
           {/* Background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#8b5cf6] opacity-[0.06] blur-[80px] pointer-events-none rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#0057ff] opacity-[0.06] blur-[80px] pointer-events-none rounded-full" />
 
           <div className="relative">
-            <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#09090b] text-[#8b5cf6] mb-6">
+            <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-[#27272a] bg-[#09090b] text-[#0057ff] mb-6">
               {t("badge")}
             </span>
 
@@ -55,7 +55,7 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
             </p>
 
             {submitted ? (
-              <div className="inline-flex items-center gap-2 text-[#8b5cf6] font-medium">
+              <div className="inline-flex items-center gap-2 text-[#0057ff] font-medium">
                 <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                   <path
                     fillRule="evenodd"
@@ -81,7 +81,7 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-3 rounded-xl bg-[#8b5cf6] hover:bg-[#7c3aed] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
+                  className="px-6 py-3 rounded-xl bg-[#0057ff] hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
                 >
                   {loading ? "..." : t("cta")}
                 </button>
