@@ -17,7 +17,6 @@ export default function HowItWorks() {
     <section id="how-it-works" className="py-28 px-6">
       {/* Subtle separator */}
       <div className="max-w-6xl mx-auto mb-28">
-        <div className="h-px bg-linear-to-r from-transparent via-border to-transparent" />
       </div>
 
       <div className="max-w-6xl mx-auto">

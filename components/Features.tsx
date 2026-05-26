@@ -3,12 +3,13 @@
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
+import Image from "next/image";
 
 
 const features = [
-  { key: "1", image: "" },
-  { key: "2", image: "" },
-  { key: "3", image: "" },
+  { key: "1", image: "/features/features-1.jpg" },
+  { key: "2", image: "/features/features-2.jpg" },
+  { key: "3", image: "/features/features-3.jpg" },
 ];
 
 const easing = [0.22, 1, 0.36, 1] as const;
@@ -52,8 +53,8 @@ export default function Features() {
               <div className="absolute inset-0 bg-linear-to-br from-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-transparent transition-all duration-500 rounded-2xl" />
 
               <div className="relative">
-                <div className="w-auto h-80 rounded-xl bg-accent/10 text-accent flex items-center justify-center mb-5">
-                  {/* Image here */}
+                <div className="w-full h-80 rounded-xl overflow-hidden mb-5">
+                  <Image width={300} height={320} src={image} alt={t(`${key}_title`)} className="w-full h-full object-cover rounded-xl" />
                 </div>
                 <div className="p-3">
                   <h3 className="font-semibold text-text mb-2 text-2xl">

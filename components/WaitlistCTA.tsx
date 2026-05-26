@@ -30,7 +30,6 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
   return (
     <section id="waitlist" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="h-px bg-linear-to-r from-transparent via-border to-transparent mb-28" />
 
         <motion.div
           ref={ref}
