@@ -44,7 +44,7 @@ export default function Hero({ lang }: { lang: string }) {
   const preHeroOpacity = useTransform(scrollYProgress, [0, 0.25], [1, 0]);
 
   // Overlay fades in to make hero text readable over video
-  const overlayOpacity = useTransform(scrollYProgress, [0.4, 0.72], [0, 0.65]);
+  const overlayOpacity = useTransform(scrollYProgress, [0.4, 0.72], [0, 0.90]);
 
   // Hero content rises and scales in from the video's position
   const heroOpacity = useTransform(scrollYProgress, [0.45, 0.75], [0, 1]);
@@ -142,7 +142,7 @@ export default function Hero({ lang }: { lang: string }) {
               </span>
             </h1>
 
-            <p className="text-lg text-muted max-w-xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl text-muted max-w-xl mx-auto mb-10 leading-relaxed">
               {t("subtitle")}
             </p>
 

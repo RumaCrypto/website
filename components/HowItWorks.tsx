@@ -59,10 +59,10 @@ export default function HowItWorks() {
                 </span>
               </div>
 
-              <h3 className="font-semibold text-text mb-3 text-[0.9375rem]">
+              <h3 className="font-semibold text-text mb-3 text-2xl">
                 {t(`${step}_title`)}
               </h3>
-              <p className="text-sm text-muted leading-relaxed max-w-xs">
+              <p className="text-lg text-muted leading-relaxed max-w-xs">
                 {t(`${step}_desc`)}
               </p>
             </motion.div>

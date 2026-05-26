@@ -24,11 +24,11 @@ export default function Partners() {
         >
           Trusted Partners Worldwide
         </h3>
-        <p>
+        <p className="text-lg">
           We&apos;re partners with countless major organisations around the globe
         </p>
         <div
-          className="flex flex-wrap items-center justify-center gap-4"
+          className="flex flex-wrap items-center justify-center gap-20 mt-8"
         >
           {partners.map((partner, index) => (
             <Image

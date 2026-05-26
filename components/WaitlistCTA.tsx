@@ -50,7 +50,7 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
             <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold text-text mb-4 tracking-tight">
               {t("title")}
             </h2>
-            <p className="text-muted max-w-md mx-auto mb-10 leading-relaxed">
+            <p className="text-muted max-w-md mx-auto mb-10 leading-relaxed text-lg">
               {t("subtitle")}
             </p>
 
