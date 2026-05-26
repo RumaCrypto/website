@@ -39,7 +39,7 @@ export default function WaitlistCTA({ lang }: { lang: string }) {
           transition={{ duration: 0.6, ease: easing }}
         >
           {/* Background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent opacity-[0.06] blur-[80px] pointer-events-none rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-150 h-75 bg-accent opacity-[0.06] blur-[80px] pointer-events-none rounded-full" />
 
           <div className="relative">
             <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-border bg-background text-accent mb-6">
