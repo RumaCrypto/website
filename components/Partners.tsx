@@ -20,11 +20,11 @@ export default function Partners() {
     <section className="bg-[url(../public/partners/bg-partner.png)] bg-cover relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div className="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
         <h3
-          className="text-2xl text-neutral-800 font-semibold"
+          className="text-3xl sm:text-5xl text-neutral-800 font-semibold"
         >
           Trusted Partners Worldwide
         </h3>
-        <p className="paragraph">
+        <p>
           We&apos;re partners with countless major organisations around the globe
         </p>
         <div

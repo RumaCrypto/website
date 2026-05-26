@@ -28,13 +28,13 @@ export default function HowItWorks() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, ease: easing }}
         >
-          <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-border bg-surface text-accent mb-4">
+          <span className="sr-only inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-border bg-surface text-accent mb-4">
             {t("badge")}
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-text mb-4">
+          <h2 className="text-3xl sm:text-5xl font-bold text-text mb-4">
             {t("title")}
           </h2>
-          <p className="text-muted max-w-md mx-auto leading-relaxed">
+          <p className="sm:text-2xl text-muted max-w-xl mx-auto leading-relaxed">
             {t("subtitle")}
           </p>
         </motion.div>

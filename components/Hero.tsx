@@ -5,8 +5,6 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import { getUserLocation, submitToNotion } from "@/lib/notion";
 
-const easing = [0.22, 1, 0.36, 1] as const;
-
 function ScrollIndicator() {
   return (
     <div className="w-7 h-11 rounded-full border-2 border-accent flex justify-center pt-2">
@@ -125,7 +123,7 @@ export default function Hero({ lang }: { lang: string }) {
         {/* Dark overlay — fades in for text legibility */}
         <motion.div
           style={{ opacity: overlayOpacity }}
-          className="absolute inset-0 z-[1] bg-background pointer-events-none"
+          className="absolute inset-0 z-1 bg-background pointer-events-none"
         />
 
         {/* Hero content — fades + rises + scales in over the expanding video */}
