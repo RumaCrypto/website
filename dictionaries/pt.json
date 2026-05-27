@@ -1,23 +1,67 @@
 {
   "metadata": {
-    "title": "Ruma - Carteira cripto simples",
-    "description": "A carteira cripto com autocustódia mais fácil de usar"
+    "title": "Ruma — Pagamentos globais",
+    "description": "A app de pagamentos global onde você é o dono"
+  },
+  "nav": {
+    "features": "Funcionalidades",
+    "how_it_works": "Como começar",
+    "security": "Segurança",
+    "cta": "Receber notícias"
+  },
+  "pre-hero": {
+    "title": "Descubra como você pode recuperar o controle do seu dinheiro"
   },
   "hero": {
-    "1": {
-      "title": "Sabemos que isso pode ser difícil",
-      "subtitle": "Cripto, blockchain, web3, autocustódia. Todos esses termos são novos e parecem muito diferentes dos serviços bancários tradicionais, e são!"
-    },
-    "2": {
-      "title": "Você precisa de uma maneira simples",
-      "subtitle": "É por isso que criamos o Ruma, para que você possa aproveitar as vantagens deste sistema monetário muito mais eficiente."
-    },
-    "3": {
-      "title": "Sua entrada para um mundo cripto",
-      "subtitle": "A carteira Ethereum mais fácil de usar",
-      "cta": "Receba as notícias primeiro",
-      "cta-placeholder": "Receba as notícias primeiro",
-      "thank_you": "Obrigado por se inscrever!"
-    }
+    "title_1": "Sua própria",
+    "title_2": "conta em dólares",
+    "subtitle": "A app de pagamentos globais onde você é o dono. Dólares, autocustódia, sem bancos intermediários.",
+    "cta": "Receber notícias",
+    "placeholder": "Insira seu e-mail",
+    "thank_you": "Você está na lista! Vamos te contatar em breve.",
+    "social_proof": "Não compartilhamos seu e-mail com terceiros"
+  },
+  "features": {
+    "badge": "Funcionalidades",
+    "title": "Compre e pague com dólares digitais de forma simples e segura",
+    "subtitle": "Ruma usa tecnologia blockchain em uma interface móvel simples",
+    "1_title": "Feito para a LATAM",
+    "1_desc": "Deposite desde bancos no Brasil, Argentina, México, Venezuela e Colômbia.",
+    "2_title": "Autocustódia",
+    "2_desc": "Nunca custodiamos seu dinheiro, você mantém o controle total.",
+    "3_title": "Custos mais baixos",
+    "3_desc": "Nossas transações: ¢. Outros canais: $"
+  },
+  "how_it_works": {
+    "badge": "Como Começar",
+    "title": "Simplifique suas transações",
+    "subtitle": "De zero a experto em minutos.",
+    "1_title": "Baixe Ruma",
+    "1_desc": "Instale a app em seu dispositivo iOS ou Android. Disponível em breve nas duas lojas.",
+    "2_title": "Crie sua conta",
+    "2_desc": "Entre com sua biometria (dedo/rosto) e sua conta está pronta.",
+    "3_title": "Deposite e envie",
+    "3_desc": "Compre dólares digitais pela app com seu banco local e comece a fazer pagamentos."
+  },
+  "partners": {
+    "title": "Nuestros Aliados",
+    "subtitle": "Tecnologia que usamos e equipes nas que confiamos"
+  },
+  "waitlist": {
+    "badge": "Acesso Antecipado",
+    "title": "Seja o primeiro a testar Ruma",
+    "subtitle": "Seja parte da lista de espera e obtenha acesso antecipado quando lançarmos.",
+    "cta": "Receber notícias",
+    "placeholder": "Insira seu e-mail",
+    "thank_you": "Você está na lista! Vamos te contatar em breve."
+  },
+  "footer": {
+    "tagline": "Sua própria conta em dólares.",
+    "links_product": "Produto",
+    "link_features": "Funcionalidades",
+    "link_how": "Como Começar",
+    "links_company": "Empresa",
+    "link_contact": "Contato com fundador",
+    "copyright": "© 2025 Ruma. Todos os direitos reservados."
   }
 }

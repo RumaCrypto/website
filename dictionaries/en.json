@@ -1,22 +1,67 @@
 {
   "metadata": {
-    "title": "Ruma - Simple crypto wallet",
-    "description": "The easiest self-custody crypto wallet"
+    "title": "Ruma — Global Payments",
+    "description": "The global payments app where you are the owner."
+  },
+  "nav": {
+    "features": "Features",
+    "how_it_works": "How to start",
+    "security": "Security",
+    "cta": "Join Waitlist"
+  },
+  "pre-hero": {
+    "title": "Discover how you can regain control over your money again"
   },
   "hero": {
-    "1": {
-      "title": "We know this can feel scary",
-      "subtitle": "Crypto, blockchain, web3. All of these words are probably new for you or feel like something different from traditional banking, and it is!"
-    },
-    "2": {
-      "title": "You need a simple way to use crypto",
-      "subtitle": "That's why we created Ruma, so you can learn and use a more efficient money system."
-    },
-    "3": {
-      "title": "Your path into the crypto world",
-      "subtitle": "The easiest to use crypto wallet",
-      "cta": "Get the news first",
-      "thank_you": "Thank you for signing up!"
-    }
+    "title_1": "Your own",
+    "title_2": "account in dollars",
+    "subtitle": "The global payments app where you are the owner. Dollars, self-custody, no banks or intermidiaries.",
+    "cta": "Get news",
+    "placeholder": "Enter your email",
+    "thank_you": "You're on the list! We'll be in touch soon.",
+    "social_proof": "We don't share your email with third parties"
+  },
+  "features": {
+    "badge": "Features",
+    "title": "Buy and pay with digital dollars simply and safely",
+    "subtitle": "Ruma uses blockchain technology in a familiar mobile interface.",
+    "1_title": "Built for LATAM",
+    "1_desc": "Deposit from your bank in Brazil, Argentina, Mexico, Venezuela and Colombia",
+    "2_title": "Self-Custody",
+    "2_desc": "We never hold your money, you stay in full control.",
+    "3_title": "Lower costs",
+    "3_desc": "Our transactions: ¢. Other payment channels: $$"
+  },
+  "how_it_works": {
+    "badge": "How to Start",
+    "title": "Simplify your transactions",
+    "subtitle": "From zero to expert in minutes.",
+    "1_title": "Download Ruma",
+    "1_desc": "Install the app on your iOS or Android device. Available soon on both app stores.",
+    "2_title": "Create your account",
+    "2_desc": "Use your fingerprint/faceId to create your account.",
+    "3_title": "Deposit and send",
+    "3_desc": "Buy digital dollars from within the app with your bank account and start paying."
+  },
+  "partners": {
+    "title": "Trusted Partners",
+    "subtitle": "Technologies we use and teams we trust"
+  },
+  "waitlist": {
+    "badge": "Early Access",
+    "title": "Be first to try Ruma",
+    "subtitle": "Join the waitlist and get early access when we launch.",
+    "cta": "Join Waitlist",
+    "placeholder": "Enter your email",
+    "thank_you": "You're on the list! We'll be in touch soon."
+  },
+  "footer": {
+    "tagline": "Your own account in dollars.",
+    "links_product": "Product",
+    "link_features": "Features",
+    "link_how": "How to Start",
+    "links_company": "Company",
+    "link_contact": "Talk to the founder",
+    "copyright": "© 2025 Ruma. All rights reserved."
   }
 }
