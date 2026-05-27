@@ -14,7 +14,7 @@ export default function HowItWorks() {
   const t = useTranslations("how_it_works");
 
   return (
-    <section id="how-it-works" className="py-28 px-6">
+    <section id="how-to-start" className="py-28 px-6">
       {/* Subtle separator */}
       <div className="max-w-6xl mx-auto mb-28">
       </div>

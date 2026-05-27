@@ -27,8 +27,7 @@ export default function Navbar({ lang }: { lang: string }) {
 
   const navLinks = [
     { label: t("features"), href: "#features" },
-    { label: t("how_it_works"), href: "#how-it-works" },
-    { label: t("security"), href: "#security" },
+    { label: t("how_it_works"), href: "#how-to-start" },
   ];
 
   return (
