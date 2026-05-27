@@ -3,6 +3,7 @@
 import Image from "next/image";
 import rhinestoneLogo from "../public/partners/rhinestone.svg";
 import p2pmeLogo from "../public/partners/p2pme.svg";
+import reclaimLogo from "../public/partners/reclaim.png";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 
 const partners = [
@@ -13,6 +14,10 @@ const partners = [
   {
     name: "P2P.me",
     image: p2pmeLogo,
+  },
+  {
+    name: "Reclaim",
+    image: reclaimLogo,
   },
 ];
 
