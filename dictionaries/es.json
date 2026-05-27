@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "title": "Ruma — Billetera Cripto Simple",
-    "description": "La billetera de autocustodia más fácil. Sin complejidad, sin confusión — solo tu dinero, tu control."
+    "title": "Ruma — Pagos globales",
+    "description": "La app de pagos global donde tú eres el dueño"
   },
   "nav": {
     "features": "Funciones",
-    "how_it_works": "Cómo funciona",
+    "how_it_works": "Cómo Empezar",
     "security": "Seguridad",
     "cta": "Recibir noticias"
   },
@@ -13,9 +13,9 @@
     "title": "Descubre cómo puedes recuperar el control de tu dinero"
   },
   "hero": {
-    "title_1": "Cripto hecho",
-    "title_2": "simple para todos",
-    "subtitle": "La billetera de autocustodia más fácil. Sin complejidad, sin confusión — solo tu dinero, tu control.",
+    "title_1": "Tu propia",
+    "title_2": "cuenta en dólares",
+    "subtitle": "La app de pagos globales donde tú eres el dueño. Dólares, autocustodia, sin bancos o intermediarios.",
     "cta": "Recibir noticias",
     "placeholder": "Ingresa tu correo",
     "thank_you": "¡Estás en la lista! Te contactaremos pronto.",
@@ -23,25 +23,29 @@
   },
   "features": {
     "badge": "Funciones",
-    "title": "Todo lo que necesitas para tener cripto",
-    "subtitle": "Ruma elimina la complejidad del cripto para que puedas enfocarte en lo que importa.",
-    "1_title": "Configuración Simple",
-    "1_desc": "Comienza en minutos con nuestro proceso guiado. No se requieren conocimientos técnicos.",
+    "title": "Compra y paga con dólares digitales de forma sencilla y segura",
+    "subtitle": "Ruma usa tecnología blockchain en una interfaz móvil simple",
+    "1_title": "Hecho para LATAM",
+    "1_desc": "Deposita desde bancos en Brasil, Argentina, México, Venezuela y Colombia.",
     "2_title": "Autocustodia",
-    "2_desc": "Tus llaves, tu cripto. Nunca tenemos tus activos — tú mantienes el control total.",
-    "3_title": "Multi-Cadena",
-    "3_desc": "Gestiona Bitcoin, Ethereum y más desde una sola interfaz hermosa."
+    "2_desc": "Nunca custodiamos tu dinero, tú mantienes el control total.",
+    "3_title": "Costos más bajos",
+    "3_desc": "Nuestras transacciones: ¢. Otros canales: $$"
   },
   "how_it_works": {
-    "badge": "Cómo Funciona",
-    "title": "Tres pasos al cripto",
-    "subtitle": "De cero a tener cripto en minutos.",
+    "badge": "Cómo Empezar",
+    "title": "Simplifica tus transacciones",
+    "subtitle": "De cero a experto en minutos.",
     "1_title": "Descarga Ruma",
-    "1_desc": "Instala la app en tu dispositivo iOS o Android. Disponible en ambas tiendas.",
-    "2_title": "Crea tu Billetera",
-    "2_desc": "Configura tu billetera con nuestro flujo guiado. Explicamos cada paso claramente.",
-    "3_title": "Comienza a Usar Cripto",
-    "3_desc": "Envía, recibe y almacena cripto tan fácilmente como enviar un mensaje de texto."
+    "1_desc": "Instala la app en tu dispositivo iOS o Android. Disponible pronto en ambas tiendas.",
+    "2_title": "Crea tu cuenta",
+    "2_desc": "Ingresa con tu biometría (huella/rostro) y tu cuenta está lista.",
+    "3_title": "Deposita y envía",
+    "3_desc": "Compra dólares digitales desde la app con tu banco local y empieza a hacer pagos."
+  },
+  "partners": {
+    "title": "Nuestros Aliados",
+    "subtitle": "Tecnología que usamos y equipos en los que confiamos"
   },
   "waitlist": {
     "badge": "Acceso Anticipado",
@@ -52,14 +56,11 @@
     "thank_you": "¡Estás en la lista! Te contactaremos pronto."
   },
   "footer": {
-    "tagline": "Tu camino al mundo cripto.",
+    "tagline": "Tu propia cuenta en dólares.",
     "links_product": "Producto",
     "link_features": "Funciones",
-    "link_security": "Seguridad",
-    "link_how": "Cómo Funciona",
-    "links_company": "Empresa",
-    "link_about": "Nosotros",
-    "link_blog": "Blog",
+    "link_how": "Cómo Empezar",
+    "links_company": "Compañía",
     "link_contact": "Contacto",
     "copyright": "© 2025 Ruma. Todos los derechos reservados."
   }

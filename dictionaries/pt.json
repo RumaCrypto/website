@@ -1,76 +1,66 @@
 {
   "metadata": {
-    "title": "Ruma — Carteira Cripto Simples",
-    "description": "A carteira de autocustódia mais fácil. Sem complexidade, sem confusão — só o seu dinheiro, seu controle."
+    "title": "Ruma — Pagamentos globais",
+    "description": "A app de pagamentos global onde você é o dono"
   },
   "nav": {
     "features": "Funcionalidades",
-    "how_it_works": "Como funciona",
+    "how_it_works": "Como começar",
     "security": "Segurança",
-    "cta": "Entrar na lista"
+    "cta": "Receber notícias"
+  },
+  "pre-hero": {
+    "title": "Descubra como você pode recuperar o controle do seu dinheiro"
   },
   "hero": {
-    "badge": "Carteira de Autocustódia",
-    "title_1": "Cripto feito",
-    "title_2": "simples para todos",
-    "subtitle": "A carteira de autocustódia mais fácil. Sem complexidade, sem confusão — só o seu dinheiro, seu controle.",
-    "cta": "Entrar na Lista",
-    "placeholder": "Digite seu e-mail",
-    "thank_you": "Você está na lista! Entraremos em contato em breve.",
-    "social_proof": "Junte-se a mais de 2.000 pessoas já na lista"
+    "title_1": "Sua própria",
+    "title_2": "conta em dólares",
+    "subtitle": "A app de pagamentos globais onde você é o dono. Dólares, autocustódia, sem bancos intermediários.",
+    "cta": "Receber notícias",
+    "placeholder": "Insira seu e-mail",
+    "thank_you": "Você está na lista! Vamos te contatar em breve.",
+    "social_proof": "Não compartilhamos seu e-mail com terceiros"
   },
   "features": {
     "badge": "Funcionalidades",
-    "title": "Tudo que você precisa para ter cripto",
-    "subtitle": "O Ruma elimina a complexidade do cripto para você focar no que importa.",
-    "1_title": "Configuração Simples",
-    "1_desc": "Comece em minutos com nosso processo guiado. Nenhum conhecimento técnico necessário.",
+    "title": "Compre e pague com dólares digitais de forma simples e segura",
+    "subtitle": "Ruma usa tecnologia blockchain em uma interface móvel simples",
+    "1_title": "Feito para a LATAM",
+    "1_desc": "Deposite desde bancos no Brasil, Argentina, México, Venezuela e Colômbia.",
     "2_title": "Autocustódia",
-    "2_desc": "Suas chaves, seu cripto. Nunca guardamos seus ativos — você mantém o controle total.",
-    "3_title": "Multi-Rede",
-    "3_desc": "Gerencie Bitcoin, Ethereum e mais em uma única interface linda."
+    "2_desc": "Nunca custodiamos seu dinheiro, você mantém o controle total.",
+    "3_title": "Custos mais baixos",
+    "3_desc": "Nossas transações: ¢. Outros canais: $"
   },
   "how_it_works": {
-    "badge": "Como Funciona",
-    "title": "Três passos para o cripto",
-    "subtitle": "Do zero a ter cripto em minutos.",
-    "1_title": "Baixe o Ruma",
-    "1_desc": "Instale o app no seu dispositivo iOS ou Android. Disponível em ambas as lojas.",
-    "2_title": "Crie sua Carteira",
-    "2_desc": "Configure sua carteira com nosso fluxo guiado. Explicamos cada passo claramente.",
-    "3_title": "Comece a Usar Cripto",
-    "3_desc": "Envie, receba e guarde cripto tão facilmente quanto enviar uma mensagem de texto."
+    "badge": "Como Começar",
+    "title": "Simplifique suas transações",
+    "subtitle": "De zero a experto em minutos.",
+    "1_title": "Baixe Ruma",
+    "1_desc": "Instale a app em seu dispositivo iOS ou Android. Disponível em breve nas duas lojas.",
+    "2_title": "Crie sua conta",
+    "2_desc": "Entre com sua biometria (dedo/rosto) e sua conta está pronta.",
+    "3_title": "Deposite e envie",
+    "3_desc": "Compre dólares digitais pela app com seu banco local e comece a fazer pagamentos."
   },
-  "testimonials": {
-    "badge": "Depoimentos",
-    "title": "Amado pelos primeiros usuários",
-    "1_quote": "Tentei três outras carteiras e desisti. O Ruma foi a primeira que realmente entendi.",
-    "1_name": "Maria G.",
-    "1_role": "Freelancer",
-    "2_quote": "Finalmente uma carteira cripto que minha mãe poderia usar. O processo de configuração é brilhante.",
-    "2_name": "Carlos R.",
-    "2_role": "Engenheiro de Software",
-    "3_quote": "A simplicidade não compromete a segurança. Isso é incrivelmente raro neste espaço.",
-    "3_name": "Priya K.",
-    "3_role": "Designer UX"
+  "partners": {
+    "title": "Nuestros Aliados",
+    "subtitle": "Tecnologia que usamos e equipes nas que confiamos"
   },
   "waitlist": {
     "badge": "Acesso Antecipado",
-    "title": "Seja o primeiro a usar o Ruma",
-    "subtitle": "Entre na lista de espera e tenha acesso antecipado quando lançarmos.",
-    "cta": "Entrar na Lista",
-    "placeholder": "Digite seu e-mail",
-    "thank_you": "Você está na lista! Entraremos em contato em breve."
+    "title": "Seja o primeiro a testar Ruma",
+    "subtitle": "Seja parte da lista de espera e obtenha acesso antecipado quando lançarmos.",
+    "cta": "Receber notícias",
+    "placeholder": "Insira seu e-mail",
+    "thank_you": "Você está na lista! Vamos te contatar em breve."
   },
   "footer": {
-    "tagline": "Seu caminho para o mundo cripto.",
+    "tagline": "Sua própria conta em dólares.",
     "links_product": "Produto",
     "link_features": "Funcionalidades",
-    "link_security": "Segurança",
-    "link_how": "Como Funciona",
+    "link_how": "Como Começar",
     "links_company": "Empresa",
-    "link_about": "Sobre",
-    "link_blog": "Blog",
     "link_contact": "Contato",
     "copyright": "© 2025 Ruma. Todos os direitos reservados."
   }
