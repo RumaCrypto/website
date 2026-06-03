@@ -15,6 +15,9 @@ export async function generateMetadata({
   return {
     title: dictionary.metadata.title,
     description: dictionary.metadata.description,
+    other: {
+      "base:app_id": "6a203b294fbf682eb25dc0fe",
+    },
   };
 }
 
