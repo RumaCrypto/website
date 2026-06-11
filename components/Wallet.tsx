@@ -1,21 +1,54 @@
+"use client"
+
 import Image from "next/image";
 import Logo01 from "@/public/logo.svg";
 import Logo02 from "@/public/wallet/arb.svg";
-import Logo03 from "@/public/wallet/usdc.svg"; // token
+import Logo03 from "@/public/wallet/usdc.svg";
 import Logo04 from "@/public/wallet/op.svg";
-import Logo05 from "@/public/wallet/bitcoin.svg"; // token
-import Logo06 from "@/public/wallet/solana.svg"; // token
+import Logo05 from "@/public/wallet/bitcoin.svg";
+import Logo06 from "@/public/wallet/solana.svg";
 import Logo07 from "@/public/wallet/eth.svg";
 import Logo08 from "@/public/wallet/base.svg";
-import Logo09 from "@/public/wallet/eth.svg"; //token
+import Logo09 from "@/public/wallet/eth.svg";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
+import { useTranslations } from "@/context/translations/TranslationsContext";
+const easing = [0.22, 1, 0.36, 1] as const;
 
 export default function BusinessCategories() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const t = useTranslations("wallet");
+
   return (
-    <section>
+  <section id="wallet" className="py-28 px-6 overflow-hidden">
+    {/* Subtle separator */}
+    <div className="max-w-6xl mx-auto mb-28">
+    </div>
+
+    <div className="max-w-6xl mx-auto">
+      <motion.div
+        ref={ref}
+        className="text-center mb-20"
+        initial={{ opacity: 0, y: 24 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.55, ease: easing }}
+      >
+        <span className="sr-only inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium border border-border bg-surface text-accent mb-4">
+          {t("badge")}
+        </span>
+        <h2 className="text-3xl sm:text-5xl font-bold text-text mb-4">
+          {t("title")}
+        </h2>
+        <p className="sm:text-2xl text-muted max-w-xl mx-auto leading-relaxed">
+          {t("subtitle")}
+        </p>
+      </motion.div>
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
           {/* Tab panels */}
-          <div className="relative flex h-81 items-center justify-center">
+          <div className="relative flex h-30 sm:h-40 items-center justify-center">
             {/* Small blue dots */}
             <div className="absolute -z-10">
               <svg
@@ -298,7 +331,8 @@ export default function BusinessCategories() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
     </section>
   );
 }

@@ -5,7 +5,7 @@
   },
   "nav": {
     "features": "Features",
-    "how_it_works": "How to start",
+    "how_to_start": "How to start",
     "security": "Security",
     "cta": "Join Waitlist"
   },
@@ -32,7 +32,7 @@
     "3_title": "Lower costs",
     "3_desc": "Our transactions: ¢. Other payment channels: $$"
   },
-  "how_it_works": {
+  "how_to_start": {
     "badge": "How to Start",
     "title": "Simplify your transactions",
     "subtitle": "From zero to expert in minutes.",
@@ -42,6 +42,11 @@
     "2_desc": "Use your fingerprint/faceId to create your account.",
     "3_title": "Deposit and send",
     "3_desc": "Buy digital dollars from within the app with your bank account and start paying."
+  },
+  "wallet": {
+    "badge": "Crypto",
+    "title": "Works like a wallet",
+    "subtitle": "For enthusiasts, a simple way to receive, hold and transfer crypto on multiple networks."
   },
   "partners": {
     "title": "Trusted Partners",
