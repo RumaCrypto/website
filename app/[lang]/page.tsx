@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import WaitlistCTA from "@/components/WaitlistCTA";
 import Footer from "@/components/Footer";
 import Partners from "@/components/Partners";
+import BusinessCategories from "@/components/Wallet";
 
 export default async function HomePage({
   params,
@@ -20,6 +21,7 @@ export default async function HomePage({
         <Hero lang={lang} />
         <Features />
         <HowItWorks />
+        <BusinessCategories />
         <Partners />
         <WaitlistCTA lang={lang} />
       </main>

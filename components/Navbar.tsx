@@ -27,7 +27,7 @@ export default function Navbar({ lang }: { lang: string }) {
 
   const navLinks = [
     { label: t("features"), href: "#features" },
-    { label: t("how_it_works"), href: "#how-to-start" },
+    { label: t("how_to_start"), href: "#how-to-start" },
   ];
 
   return (
@@ -57,7 +57,7 @@ export default function Navbar({ lang }: { lang: string }) {
           />
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 md:gap-3">
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((item) => (
@@ -74,7 +74,7 @@ export default function Navbar({ lang }: { lang: string }) {
           <LanguageSelector currentLocale={lang} />
           <a
             href="#waitlist"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
+            className="inline-flex items-center px-2 sm:px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
           >
             {t("cta")}
           </a>

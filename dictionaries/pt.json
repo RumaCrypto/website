@@ -5,7 +5,7 @@
   },
   "nav": {
     "features": "Funcionalidades",
-    "how_it_works": "Como começar",
+    "how_to_start": "Como começar",
     "security": "Segurança",
     "cta": "Receber notícias"
   },
@@ -32,7 +32,7 @@
     "3_title": "Custos mais baixos",
     "3_desc": "Nossas transações: ¢. Outros canais: $"
   },
-  "how_it_works": {
+  "how_to_start": {
     "badge": "Como Começar",
     "title": "Simplifique suas transações",
     "subtitle": "De zero a experto em minutos.",
@@ -42,6 +42,11 @@
     "2_desc": "Entre com sua biometria (dedo/rosto) e sua conta está pronta.",
     "3_title": "Deposite e envie",
     "3_desc": "Compre dólares digitais pela app com seu banco local e comece a fazer pagamentos."
+  },
+  "wallet": {
+    "badge": "Crypto",
+    "title": "Funciona como uma carteira",
+    "subtitle": "Para entusiastas, uma forma simples de receber, reter e transferir criptomoedas em múltiplas redes."
   },
   "partners": {
     "title": "Nuestros Aliados",

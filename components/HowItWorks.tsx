@@ -11,7 +11,7 @@ const easing = [0.22, 1, 0.36, 1] as const;
 export default function HowItWorks() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-  const t = useTranslations("how_it_works");
+  const t = useTranslations("how_to_start");
 
   return (
     <section id="how-to-start" className="py-28 px-6">
