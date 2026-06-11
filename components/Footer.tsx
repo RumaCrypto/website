@@ -86,17 +86,17 @@ export default function Footer({ lang }: { lang: string }) {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <a
             className="text-xs text-subtle"
-            href="https://www.pexels.com/es-es/video/impresionante-mirador-de-montana-con-un-grupo-de-personas-29886388/"
+            href="https://www.pexels.com/es-es/video/paisaje-hombre-amor-gente-17966192/"
             target="_blank"
           >
-            Vídeo de Juan Castelblanco
+            Vídeo de Ali  Alcántara
           </a>
           <a
             className="text-xs text-subtle"
             href="https://www.pexels.com/es-es/foto/ciudad-calle-autobus-bus-13784003/"
             target="_blank"
           >
-            Foto LATAM de Oscar Andres Roballo
+            Foto bus de Oscar Andres Roballo
           </a>
           <a
             className="text-xs text-subtle"
