@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import { getDictionary, Locale } from "./dictionaries";
 import { TranslationsProvider } from "@/context/translations/TranslationsContext";
 import { ReactLenis } from "lenis/react";
+import BetaAndroidBanner from "@/components/BetaAndroidBanner";
+import { betaPromoEnabled } from "@/lib/betaFlag";
 
 export async function generateMetadata({
   params,
@@ -33,6 +35,7 @@ export default async function RootLayout({
       <body>
         <ReactLenis root>
           <TranslationsProvider dictionary={dictionary}>
+            {betaPromoEnabled && <BetaAndroidBanner lang={lang} />}
             {children}
           </TranslationsProvider>
         </ReactLenis>

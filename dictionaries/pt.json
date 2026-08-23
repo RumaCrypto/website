@@ -60,11 +60,43 @@
     "placeholder": "Insira seu e-mail",
     "thank_you": "Você está na lista! Vamos te contatar em breve."
   },
+  "beta_banner": {
+    "prefix": "No Android?",
+    "message": "Teste a beta do Ruma antes que ela chegue à Play Store.",
+    "cta": "Baixar",
+    "dismiss": "Fechar"
+  },
+  "beta": {
+    "badge": "Beta · Android",
+    "title": "Teste a beta do Ruma",
+    "subtitle": "Tenha acesso antecipado ao build de Android antes que ele chegue à Play Store. Espere pontas soltas — seu feedback define o que lançamos.",
+    "meta_version": "Versão",
+    "meta_released": "Publicada",
+    "meta_size": "Tamanho",
+    "meta_android": "Requer",
+    "download_cta": "Baixar APK",
+    "download_note": "Download direto · Sem conta",
+    "checksum_label": "Checksum SHA-256",
+    "checksum_hint": "Toque para copiar. Verifique após o download.",
+    "checksum_copy": "Copiar checksum",
+    "checksum_copied": "Copiado para a área de transferência",
+    "warning_title": "Esta é uma versão beta",
+    "warning_body": "Pode conter bugs e funções incompletas. Não a use como sua carteira principal. Instale apenas se entender os riscos de software de autocustódia em desenvolvimento.",
+    "install_title": "Como instalar",
+    "install_step_1": "Baixe o APK no seu dispositivo Android.",
+    "install_step_2": "Quando solicitado, permita a instalação de fontes desconhecidas para seu navegador.",
+    "install_step_3": "Abra o arquivo e siga as instruções do sistema para instalar.",
+    "install_step_4": "Abra o Ruma e crie sua conta.",
+    "feedback_title": "Encontrou um bug?",
+    "feedback_body": "Nos conte — cada relato ajuda.",
+    "feedback_cta": "Enviar feedback"
+  },
   "footer": {
     "tagline": "Sua própria conta em dólares.",
     "links_product": "Produto",
     "link_features": "Funcionalidades",
     "link_how": "Como Começar",
+    "link_beta": "Beta para Android",
     "links_company": "Empresa",
     "link_contact": "Contato com fundador",
     "copyright": "© 2025 Ruma. Todos os direitos reservados."

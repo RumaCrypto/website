@@ -3,9 +3,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "@/context/translations/TranslationsContext";
+import { betaPromoEnabled } from "@/lib/betaFlag";
 
 export default function Footer({ lang }: { lang: string }) {
   const t = useTranslations("footer");
+  const productLinks = [
+    { label: t("link_features"), href: `/${lang}#features` },
+    { label: t("link_how"), href: `/${lang}#how-to-start` },
+    ...(betaPromoEnabled
+      ? [{ label: t("link_beta"), href: `/${lang}/beta` }]
+      : []),
+  ];
 
   return (
     <footer className="border-t border-border py-16 px-6">
@@ -40,10 +48,7 @@ export default function Footer({ lang }: { lang: string }) {
               {t("links_product")}
             </p>
             <ul className="space-y-3">
-              {[
-                { label: t("link_features"), href: "#features" },
-                { label: t("link_how"), href: "#how-to-start" },
-              ].map((link) => (
+              {productLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}

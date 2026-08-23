@@ -60,11 +60,43 @@
     "placeholder": "Enter your email",
     "thank_you": "You're on the list! We'll be in touch soon."
   },
+  "beta_banner": {
+    "prefix": "On Android?",
+    "message": "Try the Ruma beta before it hits the Play Store.",
+    "cta": "Download",
+    "dismiss": "Dismiss"
+  },
+  "beta": {
+    "badge": "Beta · Android",
+    "title": "Try the Ruma beta",
+    "subtitle": "Get early access to the Android build before it hits the Play Store. Expect rough edges — your feedback shapes what ships.",
+    "meta_version": "Version",
+    "meta_released": "Released",
+    "meta_size": "Size",
+    "meta_android": "Requires",
+    "download_cta": "Download APK",
+    "download_note": "Direct download · No account needed",
+    "checksum_label": "SHA-256 checksum",
+    "checksum_hint": "Tap to copy. Verify after downloading.",
+    "checksum_copy": "Copy checksum",
+    "checksum_copied": "Copied to clipboard",
+    "warning_title": "This is a beta build",
+    "warning_body": "It may contain bugs and unfinished features. Do not use it as your primary wallet. Only install if you understand the risks of self-custody software in development.",
+    "install_title": "How to install",
+    "install_step_1": "Download the APK on your Android device.",
+    "install_step_2": "When prompted, allow installation from unknown sources for your browser.",
+    "install_step_3": "Open the file and follow the system prompts to install.",
+    "install_step_4": "Launch Ruma and create your account.",
+    "feedback_title": "Found a bug?",
+    "feedback_body": "Send us a note — every report helps.",
+    "feedback_cta": "Send feedback"
+  },
   "footer": {
     "tagline": "Your own account in dollars.",
     "links_product": "Product",
     "link_features": "Features",
     "link_how": "How to Start",
+    "link_beta": "Beta for Android",
     "links_company": "Company",
     "link_contact": "Talk to the founder",
     "copyright": "© 2025 Ruma. All rights reserved."

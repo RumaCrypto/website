@@ -60,11 +60,43 @@
     "placeholder": "Ingresa tu correo",
     "thank_you": "¡Estás en la lista! Te contactaremos pronto."
   },
+  "beta_banner": {
+    "prefix": "¿En Android?",
+    "message": "Prueba la beta de Ruma antes de que llegue a la Play Store.",
+    "cta": "Descargar",
+    "dismiss": "Cerrar"
+  },
+  "beta": {
+    "badge": "Beta · Android",
+    "title": "Prueba la beta de Ruma",
+    "subtitle": "Accede al build de Android antes de que llegue a la Play Store. Habrá detalles por pulir — tu feedback define lo que lanzamos.",
+    "meta_version": "Versión",
+    "meta_released": "Publicada",
+    "meta_size": "Tamaño",
+    "meta_android": "Requiere",
+    "download_cta": "Descargar APK",
+    "download_note": "Descarga directa · Sin cuenta",
+    "checksum_label": "Checksum SHA-256",
+    "checksum_hint": "Toca para copiar. Verifica después de descargar.",
+    "checksum_copy": "Copiar checksum",
+    "checksum_copied": "Copiado al portapapeles",
+    "warning_title": "Esto es una versión beta",
+    "warning_body": "Puede contener errores y funciones incompletas. No la uses como tu billetera principal. Instala solo si entiendes los riesgos del software de autocustodia en desarrollo.",
+    "install_title": "Cómo instalar",
+    "install_step_1": "Descarga el APK en tu dispositivo Android.",
+    "install_step_2": "Cuando se te pida, permite la instalación desde orígenes desconocidos para tu navegador.",
+    "install_step_3": "Abre el archivo y sigue las indicaciones del sistema para instalar.",
+    "install_step_4": "Abre Ruma y crea tu cuenta.",
+    "feedback_title": "¿Encontraste un bug?",
+    "feedback_body": "Cuéntanos — cada reporte ayuda.",
+    "feedback_cta": "Enviar feedback"
+  },
   "footer": {
     "tagline": "Tu propia cuenta en dólares.",
     "links_product": "Producto",
     "link_features": "Funciones",
     "link_how": "Cómo Empezar",
+    "link_beta": "Beta para Android",
     "links_company": "Compañía",
     "link_contact": "Contacta al fundador",
     "copyright": "© 2025 Ruma. Todos los derechos reservados."

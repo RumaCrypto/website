@@ -26,8 +26,8 @@ export default function Navbar({ lang }: { lang: string }) {
   const t = useTranslations("nav");
 
   const navLinks = [
-    { label: t("features"), href: "#features" },
-    { label: t("how_to_start"), href: "#how-to-start" },
+    { label: t("features"), href: `/${lang}#features` },
+    { label: t("how_to_start"), href: `/${lang}#how-to-start` },
   ];
 
   return (
@@ -73,7 +73,7 @@ export default function Navbar({ lang }: { lang: string }) {
 
           <LanguageSelector currentLocale={lang} />
           <a
-            href="#waitlist"
+            href={`/${lang}#waitlist`}
             className="inline-flex items-center px-2 sm:px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
           >
             {t("cta")}
