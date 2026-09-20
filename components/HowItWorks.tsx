@@ -2,7 +2,9 @@
 
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import Image from "next/image";
 import { useTranslations } from "@/context/translations/TranslationsContext";
+import { appUrl } from "@/lib/appConfig";
 
 const steps = ["1", "2", "3"];
 
@@ -64,6 +66,41 @@ export default function HowItWorks() {
               <p className="text-lg text-muted leading-relaxed max-w-xs">
                 {t(`${step}_desc`)}
               </p>
+
+              {/* Step 1 is where intent peaks — hand them the app right here */}
+              {step === "1" && (
+                <a
+                  href={appUrl}
+                  className="group mt-5 inline-flex items-center gap-2.5 pl-2.5 pr-4 py-2.5 rounded-xl border border-border bg-surface hover:border-accent/40 transition-colors duration-200"
+                >
+                  <Image
+                    src="/app-icon.svg"
+                    alt=""
+                    width={28}
+                    height={28}
+                    className="w-7 h-7 rounded-lg"
+                  />
+                  <span className="text-left">
+                    <span className="block text-sm font-medium text-text">
+                      {t("1_cta")}
+                    </span>
+                    <span className="block text-xs text-subtle">
+                      {t("1_cta_note")}
+                    </span>
+                  </span>
+                  <svg
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-4 h-4 text-accent group-hover:translate-x-0.5 transition-transform"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

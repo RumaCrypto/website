@@ -2,8 +2,10 @@
 
 import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import Image from "next/image";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import { getUserLocation, submitToNotion } from "@/lib/notion";
+import { appUrl } from "@/lib/appConfig";
 
 function ScrollIndicator() {
   return (
@@ -142,9 +144,69 @@ export default function Hero({ lang }: { lang: string }) {
               </span>
             </h1>
 
-            <p className="text-xl text-muted max-w-xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl text-muted max-w-xl mx-auto mb-8 leading-relaxed">
               {t("subtitle")}
             </p>
+
+            {/* Primary: open the live web app */}
+            <div className="relative w-full max-w-md sm:w-fit sm:max-w-none mx-auto">
+              {/* Glow that lifts the card off the video */}
+              <div className="absolute -inset-4 bg-accent opacity-20 blur-2xl rounded-3xl pointer-events-none" />
+
+              <a
+                href={appUrl}
+                className="group relative flex items-center gap-3 sm:gap-4 p-4 sm:p-5 rounded-2xl border-2 border-accent/30 bg-surface/95 backdrop-blur-xl hover:border-accent/60 transition-all duration-200 shadow-2xl shadow-accent/20 hover:shadow-accent/35 hover:-translate-y-1 text-left"
+              >
+                <div className="relative shrink-0">
+                  <div className="absolute inset-0 bg-accent opacity-40 blur-lg rounded-2xl" />
+                  <Image
+                    src="/app-icon.svg"
+                    alt=""
+                    width={56}
+                    height={56}
+                    className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl"
+                  />
+                </div>
+
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="font-semibold text-text text-base sm:text-lg leading-snug">
+                      {t("open_app")}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-accent/10 border border-accent/20 text-accent text-[10px] font-medium shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                      {t("open_app_badge")}
+                    </span>
+                  </div>
+                  <div className="text-xs sm:text-sm text-muted leading-snug mt-1 sm:whitespace-nowrap">
+                    {t("open_app_note")}
+                  </div>
+                </div>
+
+                <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-accent flex items-center justify-center text-white group-hover:translate-x-0.5 transition-transform">
+                  <svg
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-4.5 h-4.5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            {/* Secondary: newsletter / waitlist */}
+            <div className="flex items-center gap-4 max-w-md mx-auto my-7">
+              <div className="flex-1 h-px bg-border" />
+              <span className="text-xs text-subtle shrink-0">
+                {t("or_divider")}
+              </span>
+              <div className="flex-1 h-px bg-border" />
+            </div>
 
             {submitted ? (
               <div className="inline-flex items-center gap-2 text-accent font-medium">
@@ -173,7 +235,7 @@ export default function Hero({ lang }: { lang: string }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-3 rounded-xl bg-accent hover:bg-[#3a7cff] disabled:opacity-60 text-white font-medium text-sm transition-colors duration-200 shrink-0"
+                  className="px-6 py-3 rounded-xl border border-border bg-surface hover:border-accent/40 hover:text-accent disabled:opacity-60 text-text font-medium text-sm transition-colors duration-200 shrink-0"
                 >
                   {loading ? "..." : t("cta")}
                 </button>

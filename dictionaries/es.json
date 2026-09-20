@@ -7,7 +7,8 @@
     "features": "Funciones",
     "how_to_start": "Cómo Empezar",
     "security": "Seguridad",
-    "cta": "Recibir noticias"
+    "cta": "Recibir noticias",
+    "open_app": "Abrir app"
   },
   "pre-hero": {
     "title": "Descubre cómo puedes recuperar el control de tu dinero"
@@ -19,7 +20,11 @@
     "cta": "Recibir noticias",
     "placeholder": "Ingresa tu correo",
     "thank_you": "¡Estás en la lista! Te contactaremos pronto.",
-    "social_proof": "No compartimos tu correo con terceros"
+    "social_proof": "No compartimos tu correo con terceros",
+    "open_app": "Abrir app web",
+    "open_app_note": "Funciona en tu navegador · Sin instalar nada",
+    "or_divider": "o",
+    "open_app_badge": "En vivo"
   },
   "features": {
     "badge": "Funciones",
@@ -36,12 +41,14 @@
     "badge": "Cómo Empezar",
     "title": "Simplifica tus transacciones",
     "subtitle": "De cero a experto en minutos.",
-    "1_title": "Descarga Ruma",
-    "1_desc": "Instala la app en tu dispositivo iOS o Android. Disponible pronto en ambas tiendas.",
+    "1_title": "Abre Ruma",
+    "1_desc": "Ábrela en tu navegador y úsala al instante. También puedes instalarla en tu pantalla de inicio.",
     "2_title": "Crea tu cuenta",
     "2_desc": "Ingresa con tu biometría (huella/rostro) y tu cuenta está lista.",
     "3_title": "Deposita y envía",
-    "3_desc": "Compra dólares digitales desde la app con tu banco local y empieza a hacer pagos."
+    "3_desc": "Compra dólares digitales desde la app con tu banco local y empieza a hacer pagos.",
+    "1_cta": "Abrir app web",
+    "1_cta_note": "app.ruma.live"
   },
   "wallet": {
     "badge": "Cripto",
@@ -53,9 +60,9 @@
     "subtitle": "Tecnología que usamos y equipos en los que confiamos"
   },
   "waitlist": {
-    "badge": "Acceso Anticipado",
-    "title": "Sé el primero en probar Ruma",
-    "subtitle": "Únete a la lista de espera y obtén acceso anticipado cuando lancemos.",
+    "badge": "Novedades",
+    "title": "No te pierdas lo que viene",
+    "subtitle": "Te escribimos cuando haya nuevas funciones, nuevos países y la app en las tiendas.",
     "cta": "Recibir noticias",
     "placeholder": "Ingresa tu correo",
     "thank_you": "¡Estás en la lista! Te contactaremos pronto."

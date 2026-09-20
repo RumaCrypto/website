@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import LanguageSelector from "@/components/LanguageSelector";
+import { appUrl } from "@/lib/appConfig";
 
 export default function Navbar({ lang }: { lang: string }) {
   const { scrollY } = useScroll();
@@ -71,12 +72,27 @@ export default function Navbar({ lang }: { lang: string }) {
             ))}
           </nav>
 
-          <LanguageSelector currentLocale={lang} />
           <a
             href={`/${lang}#waitlist`}
-            className="inline-flex items-center px-2 sm:px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
+            className="hidden sm:inline-flex items-center px-2 py-2 text-sm text-muted hover:text-text transition-colors duration-200"
           >
             {t("cta")}
+          </a>
+
+          <LanguageSelector currentLocale={lang} />
+
+          <a
+            href={appUrl}
+            className="inline-flex items-center gap-2 px-2 sm:px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
+          >
+            <Image
+              src="/app-icon.svg"
+              alt=""
+              width={18}
+              height={18}
+              className="w-[18px] h-[18px] rounded-[4px]"
+            />
+            {t("open_app")}
           </a>
         </div>
       </div>

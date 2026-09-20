@@ -7,7 +7,8 @@
     "features": "Features",
     "how_to_start": "How to start",
     "security": "Security",
-    "cta": "Join Waitlist"
+    "cta": "Join Waitlist",
+    "open_app": "Open app"
   },
   "pre-hero": {
     "title": "Find out how you can regain control over your money again"
@@ -19,7 +20,11 @@
     "cta": "Get news",
     "placeholder": "Enter your email",
     "thank_you": "You're on the list! We'll be in touch soon.",
-    "social_proof": "We don't share your email with third parties"
+    "social_proof": "We don't share your email with third parties",
+    "open_app": "Open web app",
+    "open_app_note": "Runs in your browser · Nothing to install",
+    "or_divider": "or",
+    "open_app_badge": "Live"
   },
   "features": {
     "badge": "Features",
@@ -36,12 +41,14 @@
     "badge": "How to Start",
     "title": "Simplify your transactions",
     "subtitle": "From zero to expert in minutes.",
-    "1_title": "Download Ruma",
-    "1_desc": "Install the app on your iOS or Android device. Available soon on both app stores.",
+    "1_title": "Open Ruma",
+    "1_desc": "Open it in your browser and use it right away. You can also install it to your home screen.",
     "2_title": "Create your account",
     "2_desc": "Use your fingerprint/faceId to create your account.",
     "3_title": "Deposit and send",
-    "3_desc": "Buy digital dollars from within the app with your bank account and start paying."
+    "3_desc": "Buy digital dollars from within the app with your bank account and start paying.",
+    "1_cta": "Open web app",
+    "1_cta_note": "app.ruma.live"
   },
   "wallet": {
     "badge": "Crypto",
@@ -53,9 +60,9 @@
     "subtitle": "Technologies we use and teams we trust"
   },
   "waitlist": {
-    "badge": "Early Access",
-    "title": "Be first to try Ruma",
-    "subtitle": "Join the waitlist and get early access when we launch.",
+    "badge": "Updates",
+    "title": "Don't miss what's next",
+    "subtitle": "We'll email you when new features, new countries and the store apps land.",
     "cta": "Join Waitlist",
     "placeholder": "Enter your email",
     "thank_you": "You're on the list! We'll be in touch soon."
