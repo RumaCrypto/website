@@ -1,71 +1,178 @@
 {
   "metadata": {
-    "title": "Ruma — Global Payments",
-    "description": "The global payments app where you are the owner."
+    "title": "Ruma — Send dollars to your family's app",
+    "description": "Send dollars to your family in Latin America, straight to their Yape, Pix or Mercado Pago, and pay any QR with your balance."
   },
   "nav": {
-    "features": "Features",
-    "how_to_start": "How to start",
-    "security": "Security",
-    "cta": "Join Waitlist",
-    "open_app": "Open app"
-  },
-  "pre-hero": {
-    "title": "Find out how you can regain control over your money again"
+    "send": "Sending",
+    "qr": "QR payments",
+    "how": "Get started",
+    "open_app": "Open Ruma",
+    "home": "Ruma, home"
   },
   "hero": {
-    "title_1": "Your own",
-    "title_2": "account in dollars",
-    "subtitle": "The global payments app where you are the owner. Dollars, self-custody, no banks or intermidiaries.",
-    "cta": "Get news",
-    "placeholder": "Enter your email",
-    "thank_you": "You're on the list! We'll be in touch soon.",
-    "social_proof": "We don't share your email with third parties",
-    "open_app": "Open web app",
-    "open_app_note": "Runs in your browser · Nothing to install",
-    "or_divider": "or",
-    "open_app_badge": "Live"
+    "line_1": "Send dollars",
+    "line_2": "to your family",
+    "lead": "It lands straight in their Yape, Pix or Mercado Pago, even if they don’t have Ruma.",
+    "cta": "Open Ruma",
+    "cta_note": "Runs in your browser. Nothing to install.",
+    "recipient": "Mom",
+    "card_title": "Send to",
+    "card_amount": "US$ 50",
+    "card_lands": "Lands",
+    "card_cta": "Send",
+    "sent_title": "Sent!",
+    "sent_to": "Mom",
+    "amount_label": "Amount"
   },
-  "features": {
-    "badge": "Features",
-    "title": "Buy and pay with digital dollars simply and safely",
-    "subtitle": "Ruma uses blockchain technology in a familiar mobile interface.",
-    "1_title": "Built for LATAM",
-    "1_desc": "Deposit from your bank in Brazil, Argentina, Mexico, Venezuela and Colombia",
-    "2_title": "Self-Custody",
-    "2_desc": "We never hold your money, you stay in full control.",
-    "3_title": "Lower costs",
-    "3_desc": "Our transactions: ¢. Other payment channels: $$"
+  "rails": {
+    "countries": {
+      "pe": {
+        "country": "Peru",
+        "currency": "in soles",
+        "need": "Their phone number"
+      },
+      "br": {
+        "country": "Brazil",
+        "currency": "in reais",
+        "need": "Their Pix key"
+      },
+      "ve": {
+        "country": "Venezuela",
+        "currency": "in bolívares",
+        "need": "Their phone, ID and bank"
+      },
+      "co": {
+        "country": "Colombia",
+        "currency": "in pesos",
+        "need": "Their Bre-B key"
+      },
+      "ar": {
+        "country": "Argentina",
+        "currency": "in pesos",
+        "need": "Their alias or CVU"
+      }
+    }
   },
-  "how_to_start": {
-    "badge": "How to Start",
-    "title": "Simplify your transactions",
-    "subtitle": "From zero to expert in minutes.",
-    "1_title": "Open Ruma",
-    "1_desc": "Open it in your browser and use it right away. You can also install it to your home screen.",
-    "2_title": "Create your account",
-    "2_desc": "Use your fingerprint/faceId to create your account.",
-    "3_title": "Deposit and send",
-    "3_desc": "Buy digital dollars from within the app with your bank account and start paying.",
-    "1_cta": "Open web app",
-    "1_cta_note": "app.ruma.live"
+  "qr": {
+    "heading": "Pay with QR at the shop",
+    "text": "Scan the code and pay with your dollar balance. Works with QR codes from:",
+    "methods": [
+      "Pix",
+      "Mercado Pago",
+      "DeUna",
+      "Yape"
+    ],
+    "screen_title": "Pay QR",
+    "merchant": "Bodega Rosita",
+    "place": "Yape · Lima",
+    "amount": "S/ 18.50",
+    "from_balance": "From your dollar balance",
+    "pay": "Pay",
+    "paid": "Paid!",
+    "again": "Show again",
+    "detail_shop": "Shop",
+    "detail_method": "Method",
+    "method_value": "Yape QR",
+    "detail_from": "From",
+    "from_value": "Your dollar balance"
   },
-  "wallet": {
-    "badge": "Crypto",
-    "title": "Works like a wallet",
-    "subtitle": "For enthusiasts, a simple way to receive, hold and transfer crypto on multiple networks."
+  "balance": {
+    "heading": "Your dollars are yours alone",
+    "text": "Nobody holds your money for you: you’re in control. And in the same place, your Bitcoin, Ether and more.",
+    "networks": "Receive, hold and move your assets on Base, Arbitrum, Optimism and Solana.",
+    "action": "See your balance in Ruma",
+    "total_label": "Your balance",
+    "total": "US$ 1,240.50",
+    "assets": [
+      {
+        "icon": "usdc",
+        "name": "Digital dollar",
+        "sym": "USDC",
+        "value": "US$ 980.00"
+      },
+      {
+        "icon": "bitcoin",
+        "name": "Bitcoin",
+        "sym": "BTC",
+        "value": "US$ 160.30"
+      },
+      {
+        "icon": "eth",
+        "name": "Ether",
+        "sym": "ETH",
+        "value": "US$ 100.20"
+      }
+    ]
+  },
+  "how": {
+    "heading": "Get started in four steps",
+    "steps": [
+      {
+        "title": "Open it on the web",
+        "body": "Go to app.ruma.live on your phone or computer."
+      },
+      {
+        "title": "Sign up with your fingerprint",
+        "body": "You use your fingerprint or Face ID to create your account."
+      },
+      {
+        "title": "Add dollars from your bank",
+        "body": "From Brazil, Argentina, Mexico, Venezuela or Colombia."
+      },
+      {
+        "title": "Send or pay",
+        "body": "To your family’s app, or a QR at the shop."
+      }
+    ],
+    "ui": {
+      "onboarding_title": "Send to your people",
+      "onboarding_text": "Send money straight to your family and friends' local method. They don't need to use Ruma.",
+      "onboarding_cta": "Get started",
+      "onboarding_login": "Sign in",
+      "passkey_title": "Create your account",
+      "passkey_text": "Use your fingerprint or Face ID to continue.",
+      "passkey_cta": "Continue",
+      "deposit_title": "Add balance",
+      "deposit_from": "From your bank in",
+      "deposit_country": "Colombia",
+      "deposit_amount": "US$ 100",
+      "deposit_cta": "Continue",
+      "send_title": "Send to Mom",
+      "send_method": "Yape · Peru",
+      "send_amount": "US$ 50",
+      "send_note": "Lands in soles",
+      "send_cta": "Send",
+      "language": "English"
+    },
+    "chips": [
+      "app.ruma.live",
+      "Face ID ready",
+      "+ US$ 100",
+      "Sent!"
+    ],
+    "steps_label": "Steps to get started"
   },
   "partners": {
-    "title": "Trusted Partners",
-    "subtitle": "Technologies we use and teams we trust"
+    "lead": "Built with"
   },
   "waitlist": {
-    "badge": "Updates",
-    "title": "Don't miss what's next",
-    "subtitle": "We'll email you when new features, new countries and the store apps land.",
-    "cta": "Join Waitlist",
-    "placeholder": "Enter your email",
-    "thank_you": "You're on the list! We'll be in touch soon."
+    "heading": "Hear what’s new",
+    "text": "We’ll write when new countries and the store apps land. We never share your email.",
+    "placeholder": "you@email.com",
+    "input_label": "Your email",
+    "cta": "Tell me",
+    "thank_you": "Done! We’ll write when there’s news.",
+    "error": "We could not save your email. Check your connection and try again.",
+    "sending": "Sending…"
+  },
+  "footer": {
+    "invite": "Send your first dollar today",
+    "cta": "Open Ruma",
+    "links_label": "Ruma elsewhere",
+    "link_contact": "Talk to the founder",
+    "link_beta": "Android beta",
+    "rights": "All rights reserved."
   },
   "beta_banner": {
     "prefix": "On Android?",
@@ -98,14 +205,15 @@
     "feedback_body": "Send us a note — every report helps.",
     "feedback_cta": "Send feedback"
   },
-  "footer": {
-    "tagline": "Your own account in dollars.",
-    "links_product": "Product",
-    "link_features": "Features",
-    "link_how": "How to Start",
-    "link_beta": "Beta for Android",
-    "links_company": "Company",
-    "link_contact": "Talk to the founder",
-    "copyright": "© 2025 Ruma. All rights reserved."
+  "methods": {
+    "heading": "How your family gets it",
+    "sub": "You send dollars and your family receives them in their currency, in the app they already use. They don’t need Ruma.",
+    "need_label": "You need",
+    "question": "Where is your family?",
+    "you": "You",
+    "you_amount": "US$ 50",
+    "you_sub": "in dollars",
+    "ruma_sub": "converts and sends it",
+    "bank": "Their method isn’t here? You can also send to their bank account."
   }
 }

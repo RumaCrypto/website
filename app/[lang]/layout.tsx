@@ -1,17 +1,19 @@
 import "../globals.css";
 import { Metadata } from "next";
-import { getDictionary, Locale } from "./dictionaries";
+import { notFound } from "next/navigation";
+import { getDictionary, hasLocale } from "./dictionaries";
 import { TranslationsProvider } from "@/context/translations/TranslationsContext";
-import { ReactLenis } from "lenis/react";
+import SmoothScroll from "@/components/SmoothScroll";
 import BetaAndroidBanner from "@/components/BetaAndroidBanner";
 import { betaPromoEnabled } from "@/lib/betaFlag";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: Locale }>;
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
+  if (!hasLocale(lang)) notFound();
   const dictionary = await getDictionary(lang);
 
   return {
@@ -28,17 +30,24 @@ export default async function RootLayout({
   params,
 }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
-  const dictionary = await getDictionary(lang as Locale);
+  if (!hasLocale(lang)) notFound();
+  const dictionary = await getDictionary(lang);
 
   return (
-    <html lang={lang}>
+    // The `js` class gates every hidden starting state, so nothing stays
+    // invisible when scripts are off; React must not fight it on hydration.
+    <html lang={lang} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <link rel="preload" href="/fonts/garet.heavy.ttf" as="font" type="font/ttf" crossOrigin="" />
+      </head>
       <body>
-        <ReactLenis root>
+        <SmoothScroll>
           <TranslationsProvider dictionary={dictionary}>
             {betaPromoEnabled && <BetaAndroidBanner lang={lang} />}
             {children}
           </TranslationsProvider>
-        </ReactLenis>
+        </SmoothScroll>
       </body>
     </html>
   );

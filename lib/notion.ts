@@ -28,13 +28,17 @@ export async function getUserLocation(): Promise<{
   country: string;
 }> {
   try {
-    // Get IP address
-    const ipResponse = await fetch("https://api.ipify.org?format=json");
+    // Both lookups are best-effort: a slow or blocked third party must not
+    // stall the signup, so each gives up after 3s and falls to the catch below.
+    const ipResponse = await fetch("https://api.ipify.org?format=json", {
+      signal: AbortSignal.timeout(3000),
+    });
     const ipData = await ipResponse.json();
     const ip = ipData.ip;
 
-    // Get geolocation data
-    const geoResponse = await fetch(`https://ipapi.co/${ip}/json/`);
+    const geoResponse = await fetch(`https://ipapi.co/${ip}/json/`, {
+      signal: AbortSignal.timeout(3000),
+    });
     const geoData = await geoResponse.json();
 
     return {

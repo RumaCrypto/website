@@ -1,51 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import rhinestoneLogo from "../public/partners/rhinestone.svg";
-import p2pmeLogo from "../public/partners/p2pme.svg";
-import reclaimLogo from "../public/partners/reclaim.png";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 
 const partners = [
-  {
-    name: "Rhinestone",
-    image: rhinestoneLogo,
-  },
-  {
-    name: "P2P.me",
-    image: p2pmeLogo,
-  },
-  {
-    name: "Reclaim",
-    image: reclaimLogo,
-  },
+  { name: "rhinestone", src: "/partners/rhinestone.svg", width: 160, height: 40 },
+  { name: "P2P.ME", src: "/partners/p2pme.svg", width: 150, height: 40 },
+  { name: "Reclaim Protocol", src: "/partners/reclaim.png", width: 180, height: 40 },
 ];
 
 export default function Partners() {
   const t = useTranslations("partners");
+
   return (
-    <section className="bg-[url(../public/partners/bg-partner.png)] bg-cover relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
-      <div className="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
-        <h3
-          className="text-3xl sm:text-5xl text-neutral-800 font-semibold"
-        >
-          {t("title")}
-        </h3>
-        <p className="text-lg">
-          {t("subtitle")}
-        </p>
-        <div
-          className="flex flex-wrap items-center justify-center gap-20 mt-8"
-        >
-          {partners.map((partner, index) => (
-            <Image
-              key={index}
-              className="sm:w-1/2 lg:w-72 mx-auto"
-              alt={partner.name}
-              src={partner.image}
-            ></Image>
+    <section aria-labelledby="partners-title" className="section partners">
+      <div className="frame partners__inner">
+        <h2 id="partners-title" data-reveal className="partners__lead">
+          {t("lead")}
+        </h2>
+        <ul data-reveal className="partners__logos">
+          {partners.map((p) => (
+            <li key={p.name}>
+              <Image src={p.src} alt={p.name} width={p.width} height={p.height} className="partners__logo" />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

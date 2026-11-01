@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
+import Methods from "@/components/Methods";
+import QrPay from "@/components/QrPay";
+import Balance from "@/components/Balance";
 import HowItWorks from "@/components/HowItWorks";
+import Partners from "@/components/Partners";
 import WaitlistCTA from "@/components/WaitlistCTA";
 import Footer from "@/components/Footer";
-import Partners from "@/components/Partners";
-import BusinessCategories from "@/components/Wallet";
+import RevealObserver from "@/components/RevealObserver";
 
 export default async function HomePage({
   params,
@@ -16,16 +18,18 @@ export default async function HomePage({
 
   return (
     <>
-      <Navbar lang={lang} />
+      <Navbar lang={lang} tone="inverse" />
       <main>
         <Hero lang={lang} />
-        <Features />
+        <Methods lang={lang} />
+        <QrPay />
+        <Balance />
         <HowItWorks />
-        <BusinessCategories />
         <Partners />
         <WaitlistCTA lang={lang} />
       </main>
       <Footer lang={lang} />
+      <RevealObserver />
     </>
   );
 }
