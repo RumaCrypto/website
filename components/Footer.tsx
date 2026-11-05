@@ -10,8 +10,8 @@ export default function Footer({ lang }: { lang: string }) {
   const t = useTranslations("footer");
 
   const links = [
-    { label: "Instagram", href: "https://instagram.com/rumacrypto" },
-    { label: "X", href: "https://x.com/rumacrypto" },
+    { label: "Instagram", href: "https://instagram.com/ruma_latam" },
+    { label: "X", href: "https://x.com/ruma_latam" },
     { label: "GitHub", href: "https://github.com/rumacrypto" },
     { label: t("link_contact"), href: "https://t.me/danielarroyoeth" },
     ...(betaPromoEnabled ? [{ label: t("link_beta"), href: `/${lang}/beta` }] : []),

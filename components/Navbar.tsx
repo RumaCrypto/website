@@ -26,7 +26,7 @@ export default function Navbar({ lang, tone = "ink" }: { lang: string; tone?: "i
           width={84}
           height={32}
           priority
-          className="h-7 w-auto"
+          className="h-9 w-auto"
         />
       </Link>
 
