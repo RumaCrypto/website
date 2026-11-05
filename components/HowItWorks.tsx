@@ -4,13 +4,15 @@ import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "motion/react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import Phone from "@/components/Phone";
-import { DepositScreen, OnboardingScreen, PasskeyScreen, SendScreen } from "@/components/AppScreens";
-import { useRails } from "@/lib/rails";
+import AppShot, { ShotName } from "@/components/AppShot";
 
 interface Step {
   title: string;
   body: string;
 }
+
+/** The real app screen behind each step, in order. */
+const SHOTS: ShotName[] = ["onboarding", "login", "deposit", "send"];
 
 /**
  * One phone plays the sign-up flow while the list of steps works as its
@@ -18,11 +20,10 @@ interface Step {
  * starts. The fill is a CSS animation, so the timing runs off the main
  * thread and `animationend` is what advances the step.
  */
-export default function HowItWorks() {
+export default function HowItWorks({ lang }: { lang: string }) {
   const t = useTranslations("how");
   const steps = t("steps") as Step[];
   const chips = t("chips") as string[];
-  const rails = useRails();
   const reduce = useReducedMotion();
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -37,13 +38,6 @@ export default function HowItWorks() {
     io.observe(el);
     return () => io.disconnect();
   }, []);
-
-  const screens = [
-    <OnboardingScreen key="open" />,
-    <PasskeyScreen key="key" />,
-    <DepositScreen key="top" />,
-    <SendScreen key="send" rail={rails[0]} />,
-  ];
 
   const paused = held || !onScreen;
   const next = () => setActive((i) => (i + 1) % steps.length);
@@ -98,13 +92,13 @@ export default function HowItWorks() {
 
         <div data-reveal className="player__stage">
           <Phone className="player__phone">
-            {screens.map((screen, i) => (
-              <div key={i} className={`player__screen ${i === active ? "is-active" : ""}`}>
-                {screen}
+            {SHOTS.map((shot, i) => (
+              <div key={shot} className={`player__screen ${i === active ? "is-active" : ""}`}>
+                <AppShot name={shot} lang={lang} />
               </div>
             ))}
           </Phone>
-          <div key={active} aria-hidden="true" data-ui className="player__chip">
+          <div key={active} aria-hidden="true" className="player__chip">
             <span className="toast__check">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} className="h-4 w-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />

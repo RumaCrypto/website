@@ -6,7 +6,7 @@ import { useTranslations } from "@/context/translations/TranslationsContext";
 import { appUrl } from "@/lib/appConfig";
 import { defaultRailIndex, useRails } from "@/lib/rails";
 import Phone from "@/components/Phone";
-import { SendScreen } from "@/components/AppScreens";
+import AppShot from "@/components/AppShot";
 
 const CYCLE_MS = 2800;
 
@@ -27,7 +27,7 @@ export default function Hero({ lang }: { lang: string }) {
     return () => io.disconnect();
   }, []);
 
-  // The phone cycles through the methods; never under reduced motion or off screen
+  // The note beside the phone cycles through where money can land
   useEffect(() => {
     if (reduce || !onScreen) return;
     const id = setInterval(() => {
@@ -67,9 +67,9 @@ export default function Hero({ lang }: { lang: string }) {
 
         <div data-load style={{ "--d": "300ms" } as CSSProperties} className="hero__visual">
           <Phone className="phone--hero">
-            <SendScreen rail={rail} />
+            <AppShot name="send" lang={lang} priority />
           </Phone>
-          <div aria-hidden="true" data-ui className="toast">
+          <div aria-hidden="true" className="toast">
             <span className="toast__check">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} className="h-4 w-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />

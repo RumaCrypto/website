@@ -1,21 +1,20 @@
 "use client";
 
-import { CSSProperties, useState } from "react";
+import { CSSProperties } from "react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import Phone from "@/components/Phone";
-import { QrScreen } from "@/components/AppScreens";
+import AppShot from "@/components/AppShot";
 
-export default function QrPay() {
+export default function QrPay({ lang }: { lang: string }) {
   const t = useTranslations("qr");
   const methods = t("methods") as string[];
-  const [paid, setPaid] = useState(false);
 
   return (
     <section id="qr" aria-labelledby="qr-title" className="section">
       <div className="frame split">
         <div data-reveal className="split__visual split__visual--soft">
           <Phone>
-            <QrScreen paid={paid} onPay={() => setPaid(true)} onAgain={() => setPaid(false)} />
+            <AppShot name="onboarding-qr" lang={lang} />
           </Phone>
         </div>
 
@@ -33,9 +32,6 @@ export default function QrPay() {
               </li>
             ))}
           </ul>
-          <button type="button" onClick={() => setPaid((p) => !p)} className="link split__try">
-            {paid ? t("again") : `${t("pay")} ${t("amount")}`}
-          </button>
         </div>
       </div>
     </section>

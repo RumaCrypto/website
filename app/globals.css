@@ -19,7 +19,7 @@
 /*
  * "The app at the centre": a friendly fintech system in the spirit of
  * Nubank and Revolut. Brand blue fields, rounded cards, pill buttons, and
- * the real Ruma screens inside phones as the pictures of the page. The
+ * screenshots of the real Ruma app inside phones as the pictures of the page. The
  * steps play like an app: one phone, a list that fills like stories.
  * Reveals key off a data-shown attribute that React never rewrites.
  * The methods section is one question and one route, not a catalogue.
@@ -301,7 +301,9 @@ p {
 .phone {
   position: relative;
   width: 300px;
-  height: 620px;
+  /* an iPhone's 19.5:9 screen plus the status strip, so the capture's
+     bottom buttons stay in view */
+  height: 650px;
   flex: none;
   padding: 10px;
   border-radius: 48px;
@@ -331,292 +333,24 @@ p {
   color: var(--ink);
 }
 
-/* The small phones in the steps show the whole screen at 59% */
-.phone--small {
-  width: 180px;
-  height: 373px;
-  padding: 7px;
-  border-radius: 32px;
-}
-
-.phone--small::before {
-  top: 13px;
-  width: 52px;
-  height: 14px;
-}
-
-.phone--small .phone__screen {
-  border-radius: 26px;
-}
-
-.phone--small .screen {
-  width: 168.6%;
-  height: 168.6%;
-  transform: scale(0.593);
-  transform-origin: top left;
-}
-
-.screen {
-  display: flex;
+/* A real screenshot fills the phone's screen below a status-bar strip,
+   so the notch never covers the app's own header */
+.shot {
+  width: 100%;
   height: 100%;
-  flex-direction: column;
-  padding: 54px 22px 24px;
-  font-size: 15px;
-  line-height: 1.35;
+  padding-top: 34px;
 }
 
-.screen--center {
-  align-items: center;
-  text-align: center;
-}
-
-.screen__bar {
-  display: flex;
+.shot__img {
+  display: block;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 28px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
-.screen__logo {
-  width: auto;
-  height: 22px;
-}
-
-.screen__pill {
-  padding: 5px 12px;
-  border-radius: 999px;
-  background-color: var(--surface);
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 12px;
-}
-
-.screen__title {
-  margin-bottom: 14px;
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 22px;
-  line-height: 1.15;
-}
-
-.screen__row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 16px;
-  background-color: var(--surface);
-  text-align: left;
-}
-
-.screen__avatar,
-.screen__icon {
-  display: grid;
-  flex: none;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-}
-
-.screen__avatar {
-  border-radius: 50%;
-  background-color: var(--accent);
-  color: #ffffff;
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 18px;
-}
-
-.screen__icon {
-  border-radius: 14px;
-  background-color: #ffffff;
-}
-
-.screen__icon--done {
-  background-color: var(--accent);
-  color: #ffffff;
-}
-
-.screen__who {
-  display: flex;
-  min-width: 0;
-  flex: 1;
-  flex-direction: column;
-}
-
-.screen__strong {
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 15px;
-}
-
-.screen__soft {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.screen__amount {
-  margin-top: auto;
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 44px;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  font-variant-numeric: tabular-nums;
-}
-
-.screen__amount--top {
-  margin-top: 4px;
-  font-size: 30px;
-  white-space: nowrap;
-}
-
-.screen__amount--inline {
-  margin-top: 4px;
-}
-
-.screen__label-top {
-  margin-top: 26px;
-}
-
-/* The amount keypad and the payment details fill the screen the way the app does */
-.screen__keypad {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4px;
-  margin-top: auto;
-}
-
-.screen__keypad span {
-  display: grid;
-  height: 42px;
-  place-items: center;
-  border-radius: 12px;
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 20px;
-}
-
-.screen__details {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: auto;
-  padding: 16px;
-  border-radius: 16px;
-  background-color: var(--surface);
-  font-size: 13px;
-}
-
-.screen__details div {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.screen__details dt {
-  color: var(--muted);
-}
-
-.screen__details dd {
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  text-align: right;
-}
-
-.screen__label {
-  margin-top: 4px;
-}
-
-.screen__button,
-.screen__done {
-  display: flex;
-  width: 100%;
-  min-height: 50px;
-  margin-top: 18px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 14px;
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 15px;
-}
-
-.screen__button {
-  background-color: var(--accent);
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.screen__done {
-  background-color: var(--accent-dim);
-  color: var(--accent);
-}
-
-.screen__quiet {
-  margin-top: 10px;
-  color: var(--accent);
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-.screen__mark {
-  width: 80px;
-  height: 80px;
-  margin: auto 0 22px;
-  border-radius: 22px;
-}
-
-.screen__print {
-  display: grid;
-  width: 96px;
-  height: 96px;
-  margin: auto 0 22px;
-  place-items: center;
-  border-radius: 50%;
-  background-color: var(--accent-dim);
-  color: var(--accent);
-}
-
-.screen--center .screen__soft {
-  max-width: 26ch;
-}
-
-.screen__field {
-  display: flex;
-  margin-top: 8px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px;
-  border-radius: 12px;
-  background-color: var(--surface);
-  font-family: "Garet Heavy", system-ui, sans-serif;
-}
-
-.screen__assets {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.screen__asset {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border-radius: 16px;
-  background-color: var(--surface);
-}
-
-.screen__asset img {
-  width: 36px;
-  height: 36px;
-}
-
-.screen__value {
-  margin-left: auto;
-  font-size: 14px;
-  white-space: nowrap;
-}
 
 @media (prefers-reduced-motion: no-preference) {
-  .js .screen__swap,
   .js .toast__sub {
     animation: swap-in 480ms var(--ease-expo) both;
   }
@@ -788,7 +522,7 @@ p {
 @media (max-width: 599px) {
   .phone--hero {
     width: 270px;
-    height: 560px;
+    height: 585px;
   }
 }
 
@@ -975,10 +709,33 @@ p {
   letter-spacing: -0.02em;
 }
 
-.route__value--quiet {
+/* The method the money lands in, under its amount in local currency */
+.route__method {
+  margin-top: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: var(--accent-dim);
+  color: var(--accent);
+  font-family: "Garet Heavy", system-ui, sans-serif;
+  font-size: 15px;
+}
+
+/* With no quote available the method stands in for the amount */
+.route__method--alone {
+  margin-top: 4px;
+  padding: 0;
+  background: none;
   color: var(--ink);
-  font-size: 17px;
-  letter-spacing: 0;
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.route__note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: right;
 }
 
 .route__sub {
@@ -1090,35 +847,6 @@ p {
   }
 }
 
-/* One practical line under the route, and the bank as a quiet way out */
-.route__foot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px 24px;
-  margin-top: clamp(28px, 4vw, 44px);
-  padding: 18px 22px;
-  border-radius: 20px;
-  background-color: var(--surface);
-}
-
-.route__need {
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  font-size: 17px;
-}
-
-.route__need span {
-  color: var(--muted);
-  font-family: "Garet Book", system-ui, sans-serif;
-}
-
-.route__bank {
-  max-width: 44ch;
-  color: var(--muted);
-  font-size: 15px;
-}
-
 /* ------------------------------------------------------------------ */
 /* Split sections: QR and balance                                      */
 /* ------------------------------------------------------------------ */
@@ -1162,14 +890,6 @@ p {
   font-size: 15px;
 }
 
-.split__try {
-  min-height: 44px;
-  margin-top: 20px;
-  color: var(--accent);
-  font-family: "Garet Heavy", system-ui, sans-serif;
-  cursor: pointer;
-}
-
 .panel {
   padding: clamp(32px, 5vw, 72px);
   border-radius: 36px;
@@ -1192,6 +912,45 @@ p {
 
 .panel--gold .button {
   margin-top: 28px;
+}
+
+.invest {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 32px;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .invest {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+}
+
+.invest__copy .h2 {
+  margin-top: 18px;
+}
+
+.invest__badge {
+  display: inline-flex;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: var(--ink);
+  color: #ffffff;
+  font-family: "Garet Heavy", system-ui, sans-serif;
+  font-size: 13px;
+}
+
+.invest .button {
+  margin-top: 28px;
+}
+
+.invest__mark {
+  justify-self: center;
+  width: min(100%, 300px);
+  height: auto;
+  color: rgba(11, 18, 32, 0.85);
 }
 
 .panel--blue {
@@ -1441,7 +1200,7 @@ p {
 @media (max-width: 599px) {
   .player__phone {
     width: 260px;
-    height: 537px;
+    height: 565px;
   }
 }
 

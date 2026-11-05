@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Ruma — Envía dólares a la app de tu familia",
-    "description": "Envía dólares a tu familia en Latinoamérica, directo a su Yape, Pix o Mercado Pago, y paga cualquier QR con tu saldo."
+    "description": "Envía dólares a tu familia en Latinoamérica, directo a su Yape, PIX o MercadoPago, y paga cualquier QR con tu saldo."
   },
   "nav": {
     "send": "Envíos",
@@ -13,44 +13,42 @@
   "hero": {
     "line_1": "Envía dólares",
     "line_2": "a tu familia",
-    "lead": "Les llega directo a su Yape, Pix o Mercado Pago, aunque no tengan Ruma.",
+    "lead": "Les llega directo a su Yape, PIX o MercadoPago, aunque no tengan Ruma.",
     "cta": "Abrir Ruma",
     "cta_note": "Funciona en tu navegador. No hay nada que instalar.",
     "recipient": "Mamá",
-    "card_title": "Enviar a",
-    "card_amount": "US$ 50",
-    "card_lands": "Le llega",
-    "card_cta": "Enviar",
     "sent_title": "¡Enviado!",
-    "sent_to": "Mamá",
-    "amount_label": "Monto"
+    "sent_to": "Mamá"
   },
   "rails": {
     "countries": {
-      "pe": {
-        "country": "Perú",
-        "currency": "en soles",
-        "need": "Su número de celular"
-      },
       "br": {
         "country": "Brasil",
-        "currency": "en reales",
-        "need": "Su llave Pix"
-      },
-      "ve": {
-        "country": "Venezuela",
-        "currency": "en bolívares",
-        "need": "Su teléfono, cédula y banco"
-      },
-      "co": {
-        "country": "Colombia",
-        "currency": "en pesos",
-        "need": "Su llave Bre-B"
+        "currency": "en reales"
       },
       "ar": {
         "country": "Argentina",
-        "currency": "en pesos",
-        "need": "Su alias o CVU"
+        "currency": "en pesos"
+      },
+      "ve": {
+        "country": "Venezuela",
+        "currency": "en bolívares"
+      },
+      "pe": {
+        "country": "Perú",
+        "currency": "en soles"
+      },
+      "ec": {
+        "country": "Ecuador",
+        "currency": "en dólares"
+      },
+      "bo": {
+        "country": "Bolivia",
+        "currency": "en bolivianos"
+      },
+      "co": {
+        "country": "Colombia",
+        "currency": "en pesos"
       }
     }
   },
@@ -58,51 +56,10 @@
     "heading": "Paga con QR en la tienda",
     "text": "Escanea el código y paga con tu saldo en dólares. Funciona con los QR de:",
     "methods": [
-      "Pix",
-      "Mercado Pago",
+      "PIX",
+      "MercadoPago",
       "DeUna",
       "Yape"
-    ],
-    "screen_title": "Pagar QR",
-    "merchant": "Bodega Rosita",
-    "place": "Yape · Lima",
-    "amount": "S/ 18.50",
-    "from_balance": "Desde tu saldo en dólares",
-    "pay": "Pagar",
-    "paid": "¡Pagado!",
-    "again": "Ver de nuevo",
-    "detail_shop": "Comercio",
-    "detail_method": "Método",
-    "method_value": "QR de Yape",
-    "detail_from": "Desde",
-    "from_value": "Tu saldo en dólares"
-  },
-  "balance": {
-    "heading": "Tus dólares son solo tuyos",
-    "text": "Nadie guarda tu dinero por ti: el control es tuyo. Y en el mismo lugar, tu Bitcoin, tu Ether y más.",
-    "networks": "Recibe, guarda y mueve tus activos en Base, Arbitrum, Optimism y Solana.",
-    "action": "Ver tu saldo en Ruma",
-    "total_label": "Tu saldo",
-    "total": "US$ 1,240.50",
-    "assets": [
-      {
-        "icon": "usdc",
-        "name": "Dólar digital",
-        "sym": "USDC",
-        "value": "US$ 980.00"
-      },
-      {
-        "icon": "bitcoin",
-        "name": "Bitcoin",
-        "sym": "BTC",
-        "value": "US$ 160.30"
-      },
-      {
-        "icon": "eth",
-        "name": "Ether",
-        "sym": "ETH",
-        "value": "US$ 100.20"
-      }
     ]
   },
   "how": {
@@ -113,8 +70,8 @@
         "body": "Entra a app.ruma.live desde el celular o la computadora."
       },
       {
-        "title": "Crea tu cuenta con tu huella",
-        "body": "Usas tu huella o Face ID para crear tu cuenta."
+        "title": "Crea tu cuenta con tu biometría o correo",
+        "body": "Eliges cómo entrar: con tu correo electrónico o con la biometría de tu teléfono."
       },
       {
         "title": "Carga dólares desde tu banco",
@@ -125,29 +82,9 @@
         "body": "A la app de tu familia, o un QR en la tienda."
       }
     ],
-    "ui": {
-      "onboarding_title": "Envía a los tuyos",
-      "onboarding_text": "Envía dinero directo al método local de tu familia y amigos. Ellos no necesitan usar Ruma.",
-      "onboarding_cta": "Empezar",
-      "onboarding_login": "Iniciar sesión",
-      "passkey_title": "Crea tu cuenta",
-      "passkey_text": "Usa tu huella o Face ID para continuar.",
-      "passkey_cta": "Continuar",
-      "deposit_title": "Cargar saldo",
-      "deposit_from": "Desde tu banco en",
-      "deposit_country": "Colombia",
-      "deposit_amount": "US$ 100",
-      "deposit_cta": "Continuar",
-      "send_title": "Enviar a Mamá",
-      "send_method": "Yape · Perú",
-      "send_amount": "US$ 50",
-      "send_note": "Le llega en soles",
-      "send_cta": "Enviar",
-      "language": "Español"
-    },
     "chips": [
       "app.ruma.live",
-      "Face ID listo",
+      "Cuenta creada",
       "+ US$ 100",
       "¡Enviado!"
     ],
@@ -208,12 +145,16 @@
   "methods": {
     "heading": "Así le llega a tu familia",
     "sub": "Tú envías dólares y tu familia los recibe en su moneda, en la app que ya usa. Ellos no necesitan Ruma.",
-    "need_label": "Necesitas",
     "question": "¿Dónde está tu familia?",
     "you": "Tú",
-    "you_amount": "US$ 50",
     "you_sub": "en dólares",
     "ruma_sub": "lo convierte y lo envía",
-    "bank": "¿Su método no está? También puedes enviar a su cuenta bancaria."
+    "reference": "*Valor de referencia"
+  },
+  "invest": {
+    "badge": "Próximamente",
+    "heading": "Inversiones en la app",
+    "text": "Pronto vas a poder hacer crecer tus dólares desde Ruma, en el mismo lugar donde envías y pagas.",
+    "action": "Avísame cuando esté listo"
   }
 }

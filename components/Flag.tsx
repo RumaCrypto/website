@@ -76,6 +76,25 @@ const flags: Record<RailCode, ReactNode> = {
       <path d="M8.9 14.1c3.9-1.3 8.4-1 12.1 1.1l-.25.95c-3.5-2-7.8-2.3-11.5-1.05z" fill="#ffffff" />
     </>
   ),
+  // Without its coat of arms Ecuador would read as Colombia, so it keeps a
+  // simplified one: the oval with a gold rim and a condor's wings above it.
+  ec: (
+    <>
+      <rect width="30" height="15" fill="#FFD100" />
+      <rect y="15" width="30" height="7.5" fill="#034EA2" />
+      <rect y="22.5" width="30" height="7.5" fill="#ED1C24" />
+      <path d="M10.6 10.6c1.6-.9 3-.9 4.4.4 1.4-1.3 2.8-1.3 4.4-.4-1.3.1-2.6.6-4.4 1.6-1.8-1-3.1-1.5-4.4-1.6z" fill="#5B3A1E" />
+      <ellipse cx="15" cy="16" rx="3.1" ry="4" fill="#6FA8DC" stroke="#C9A227" strokeWidth="0.9" />
+      <path d="M12.6 17.4c.9-.9 1.6-1.6 2.4-2.6.8 1 1.5 1.7 2.4 2.6z" fill="#3E7D3A" />
+    </>
+  ),
+  bo: (
+    <>
+      <rect width="30" height="10" fill="#D52B1E" />
+      <rect y="10" width="30" height="10" fill="#F9E300" />
+      <rect y="20" width="30" height="10" fill="#007934" />
+    </>
+  ),
 };
 
 export default function Flag({ code, className = "" }: { code: RailCode; className?: string }) {

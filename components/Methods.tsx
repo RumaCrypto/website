@@ -3,15 +3,19 @@
 /* eslint-disable @next/next/no-img-element */
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
-import { defaultRailIndex, useRails } from "@/lib/rails";
+import { defaultRailIndex, formatLocal, useRails } from "@/lib/rails";
+import type { Rates } from "@/lib/rates";
 import Flag from "@/components/Flag";
+
+/** The example amount the route converts. */
+const SEND_USD = 50;
 
 /**
  * One question, one route. The visitor says where their family is and sees
- * the money travel from them, through Ruma, into that country's app and
- * currency, with the one thing they need to send underneath.
+ * the money travel from them, through Ruma, into that country's method,
+ * with what it comes to in their currency at P2P.ME's sell price.
  */
-export default function Methods({ lang }: { lang: string }) {
+export default function Methods({ lang, rates }: { lang: string; rates: Rates }) {
   const t = useTranslations("methods");
   const recipient = useTranslations("hero")("recipient");
   const rails = useRails();
@@ -29,6 +33,7 @@ export default function Methods({ lang }: { lang: string }) {
   }, []);
 
   const rail = rails[index];
+  const rate = rates[rail.code];
 
   return (
     <section
@@ -77,7 +82,7 @@ export default function Methods({ lang }: { lang: string }) {
                   <path d="M4 20c1.5-3.5 4.4-5 8-5s6.5 1.5 8 5" />
                 </svg>
               </span>
-              <span className="route__value">{t("you_amount")}</span>
+              <span className="route__value">US$ {SEND_USD}</span>
               <span className="route__sub">
                 {t("you")} · {t("you_sub")}
               </span>
@@ -102,7 +107,12 @@ export default function Methods({ lang }: { lang: string }) {
                 {recipient.charAt(0)}
                 <Flag key={rail.code} code={rail.code} className="route__flag" />
               </span>
-              <span key={rail.code} className="route__value route__swap">
+              {rate !== undefined && (
+                <span key={`${rail.code}-amount`} className="route__value route__swap">
+                  {formatLocal(rail, SEND_USD * rate)}*
+                </span>
+              )}
+              <span key={rail.code} className={`route__method route__swap ${rate === undefined ? "route__method--alone" : ""}`}>
                 {rail.method}
               </span>
               <span key={`${rail.code}-cur`} className="route__sub route__swap">
@@ -110,14 +120,9 @@ export default function Methods({ lang }: { lang: string }) {
               </span>
             </div>
           </div>
-
-          <div className="route__foot">
-            <p key={rail.code} className="route__need route__swap">
-              <span>{t("need_label")}</span> {rail.need}
-            </p>
-            <p className="route__bank">{t("bank")}</p>
-          </div>
         </div>
+
+        {rate !== undefined && <p className="route__note">{t("reference")}</p>}
       </div>
     </section>
   );
