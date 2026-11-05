@@ -4,8 +4,9 @@ import Image from "next/image";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 
 const partners = [
-  { name: "rhinestone", src: "/partners/rhinestone.svg", width: 160, height: 40 },
+  { name: "Privy", src: "/partners/privy.svg", width: 160, height: 40 },
   { name: "P2P.ME", src: "/partners/p2pme.svg", width: 150, height: 40 },
+  { name: "Base", src: "/partners/base.svg", width: 150, height: 40 },
   { name: "Reclaim Protocol", src: "/partners/reclaim.png", width: 180, height: 40 },
 ];
 
