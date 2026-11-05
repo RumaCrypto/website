@@ -21,7 +21,7 @@ export default async function HomePage({
 
   return (
     <>
-      <Navbar lang={lang} tone="inverse" />
+      <Navbar lang={lang} />
       <main>
         <Hero lang={lang} />
         <Methods lang={lang} rates={rates} />

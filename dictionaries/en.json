@@ -18,7 +18,8 @@
     "cta_note": "Runs in your browser. Nothing to install.",
     "recipient": "Mom",
     "sent_title": "Sent!",
-    "sent_to": "Mom"
+    "sent_to": "Mom",
+    "countries": "{n} countries"
   },
   "rails": {
     "countries": {

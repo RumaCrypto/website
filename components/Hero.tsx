@@ -7,6 +7,7 @@ import { appUrl } from "@/lib/appConfig";
 import { defaultRailIndex, useRails } from "@/lib/rails";
 import Phone from "@/components/Phone";
 import AppShot from "@/components/AppShot";
+import Flag from "@/components/Flag";
 
 const CYCLE_MS = 2800;
 
@@ -58,7 +59,7 @@ export default function Hero({ lang }: { lang: string }) {
             {t("lead")}
           </p>
           <div data-load style={{ "--d": "480ms" } as CSSProperties} className="hero__cta">
-            <a href={appUrl} className="button button--white">
+            <a href={appUrl} className="button button--ink">
               {t("cta")}
             </a>
             <p className="hero__note">{t("cta_note")}</p>
@@ -67,13 +68,23 @@ export default function Hero({ lang }: { lang: string }) {
 
         <div data-load style={{ "--d": "300ms" } as CSSProperties} className="hero__visual">
           <Phone className="phone--hero">
-            <AppShot name="send" lang={lang} priority />
+            <AppShot name="onboarding" lang={lang} priority />
           </Phone>
+
+          {/* Where money can land: every country Ruma pays out in */}
+          <div aria-hidden="true" className="hero__reach">
+            <span className="hero__flags">
+              {rails.map((r) => (
+                <Flag key={r.code} code={r.code} />
+              ))}
+            </span>
+            {(t("countries") as string).replace("{n}", String(rails.length))}
+          </div>
+
           <div aria-hidden="true" className="toast">
-            <span className="toast__check">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} className="h-4 w-4">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12.5l4.5 4.5L19 7.5" />
-              </svg>
+            <span className="toast__avatar">
+              {(t("recipient") as string).charAt(0)}
+              <Flag key={rail.code} code={rail.code} className="toast__flag" />
             </span>
             <span className="toast__text">
               <span className="toast__title">{t("sent_title")}</span>

@@ -39,7 +39,7 @@ export default function Navbar({ lang, tone = "ink" }: { lang: string; tone?: "i
           ))}
         </nav>
         <LanguageSelector currentLocale={lang} tone={inverse ? "inverse" : "ink"} />
-        <a href={appUrl} className={`button button--small ${inverse ? "button--white" : ""}`}>
+        <a href={appUrl} className={`button button--small ${inverse ? "button--white" : "button--ink"}`}>
           {t("open_app")}
         </a>
       </div>

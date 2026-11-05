@@ -370,25 +370,11 @@ p {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 56px 0 104px;
-  background-color: var(--accent);
-  color: #ffffff;
+  padding: 40px 0 96px;
+  background-color: var(--bg);
+  color: var(--ink);
 }
 
-/* A soft light behind the phone so it reads as lit, not pasted */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 10%;
-  right: -10%;
-  width: 70vw;
-  height: 70vw;
-  max-width: 900px;
-  max-height: 900px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 65%);
-  pointer-events: none;
-}
 
 .hero__inner {
   position: relative;
@@ -405,7 +391,7 @@ p {
 
 /* Sized so the longest authored line, "pra sua família", stays on one line */
 .hero__title {
-  color: #ffffff;
+  color: var(--ink);
   font-size: clamp(36px, 10vw, 56px);
   line-height: 0.98;
   letter-spacing: -0.035em;
@@ -424,7 +410,7 @@ p {
 .hero__lead {
   max-width: 32ch;
   margin-top: 24px;
-  color: var(--on-blue-soft);
+  color: var(--muted);
   font-size: clamp(18px, 1.6vw, 22px);
   line-height: 1.5;
 }
@@ -438,18 +424,67 @@ p {
 }
 
 .hero__note {
-  color: var(--on-blue-soft);
+  color: var(--muted);
   font-size: 14px;
 }
 
+/* The phone stands upright on a soft panel, the way wallets show their app */
 .hero__visual {
   position: relative;
   display: grid;
   place-items: center;
+  padding: 48px 24px;
+  border-radius: 40px;
+  background-color: var(--surface);
 }
 
+/* A slight turn so the phone reads as held, not pasted; the cards stay level */
 .phone--hero {
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
+}
+
+/* Every country money can land in, as a stack of flags */
+.hero__reach {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px 10px 10px;
+  border-radius: 999px;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-card);
+  font-family: var(--font-display);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* On small screens the flags sit centred above the phone, clear of its notch */
+@media (max-width: 599px) {
+  .hero__visual {
+    padding-top: 84px;
+  }
+
+  .hero__reach {
+    top: 22px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.hero__flags {
+  display: flex;
+}
+
+.hero__flags .flag {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+.hero__flags .flag + .flag {
+  margin-left: -5px;
 }
 
 /* Beside the keypad, never over the amount; under the phone on small screens */
@@ -469,9 +504,10 @@ p {
 
 @media (min-width: 900px) {
   .toast {
+    /* over the screen's illustration, never over its words */
     position: absolute;
-    top: 58%;
-    left: -4%;
+    top: 30%;
+    left: -28px;
     margin-top: 0;
   }
 }
@@ -484,6 +520,31 @@ p {
   border-radius: 50%;
   background-color: var(--accent);
   color: #ffffff;
+}
+
+/* The family as an avatar, their country's flag as its badge */
+.toast__avatar {
+  position: relative;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.toast__flag {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 .toast__text {
