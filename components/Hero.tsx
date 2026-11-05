@@ -68,7 +68,7 @@ export default function Hero({ lang }: { lang: string }) {
 
         <div data-load style={{ "--d": "300ms" } as CSSProperties} className="hero__visual">
           <Phone className="phone--hero">
-            <AppShot name="onboarding" lang={lang} priority />
+            <AppShot name="homepage" lang={lang} priority />
           </Phone>
 
           {/* Where money can land: every country Ruma pays out in */}

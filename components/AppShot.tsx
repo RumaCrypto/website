@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export type ShotName = "onboarding" | "onboarding-qr" | "login" | "deposit" | "send";
+export type ShotName = "onboarding" | "onboarding-qr" | "login" | "deposit" | "send" | "homepage";
 
 /**
  * The captures have no status bar, so the phone's notch would sit on the
@@ -14,17 +14,22 @@ const TOP_EDGE: Record<ShotName, string> = {
   deposit: "#fafafa",
   // the send sheet opens over a dimmed, blurred home screen
   send: "#999999",
+  homepage: "#fafafa",
 };
+
+const EXT: Partial<Record<ShotName, string>> = { homepage: "jpeg" };
+const SIZE: Partial<Record<ShotName, [number, number]>> = { homepage: [738, 1600] };
 
 /** A real screen of the Ruma app, captured in the page's language. */
 export default function AppShot({ name, lang, priority = false }: { name: ShotName; lang: string; priority?: boolean }) {
+  const [width, height] = SIZE[name] ?? [668, 1444];
   return (
     <div className="shot" style={{ backgroundColor: TOP_EDGE[name] }}>
       <Image
-        src={`/screens/${name}-${lang}.jpg`}
+        src={`/screens/${name}-${lang}.${EXT[name] ?? "jpg"}`}
         alt=""
-        width={668}
-        height={1444}
+        width={width}
+        height={height}
         sizes="(min-width: 600px) 300px, 260px"
         priority={priority}
         className="shot__img"
