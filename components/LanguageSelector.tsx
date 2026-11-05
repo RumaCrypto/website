@@ -1,26 +1,39 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const languages = [
-  { code: "en", name: "English"},
-  { code: "es", name: "Español"},
-  { code: "pt", name: "Português"},
+  { code: "es", name: "Español" },
+  { code: "en", name: "English" },
+  { code: "pt", name: "Português" },
 ];
-
-const GlobeIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" className="w-5 h-5" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" ><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-)
 
 export default function LanguageSelector({
   currentLocale,
+  tone = "ink",
 }: {
   currentLocale: string;
+  tone?: "ink" | "inverse";
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setIsOpen(false);
+    const onClick = (e: MouseEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setIsOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onClick);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onClick);
+    };
+  }, [isOpen]);
 
   const handleLanguageChange = (locale: string) => {
     const newPath = pathname.replace(`/${currentLocale}`, `/${locale}`);
@@ -29,43 +42,49 @@ export default function LanguageSelector({
   };
 
   const currentLang = languages.find((lang) => lang.code === currentLocale);
+  const inverse = tone === "inverse";
 
   return (
-    <div className="relative">
+    <div ref={rootRef} className="relative">
       <button
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm text-muted hover:text-text hover:bg-surface border border-transparent hover:border-border transition-all duration-200 cursor-pointer"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-label={currentLang?.name}
+        className={`flex min-h-11 items-center gap-1.5 text-small cursor-pointer transition-colors duration-200 ${
+          inverse ? "text-field-ink" : "text-ink"
+        }`}
       >
-        <GlobeIcon/>
-        <span className="font-medium">{currentLang?.code.toUpperCase()}</span>
+        <span>{currentLang?.code.toUpperCase()}</span>
         <svg
-          className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          aria-hidden="true"
+          className={`h-3.5 w-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
       {isOpen && (
-        <div className="absolute top-full mt-2 right-0 bg-surface border border-border rounded-xl shadow-2xl overflow-hidden z-50 min-w-35">
+        <ul className="absolute right-0 top-full z-50 mt-1 min-w-40 bg-background py-2 text-ink shadow-[0_12px_32px_rgba(0,0,0,0.14)]">
           {languages.map((lang) => (
-            <button
-              key={lang.code}
-              onClick={() => handleLanguageChange(lang.code)}
-              className="w-full px-4 py-2.5 text-left text-sm hover:bg-border transition-colors duration-150 flex items-center gap-3 text-[#a1a1aa] hover:text-text cursor-pointer"
-            >
-              <span>{lang.code}</span>
-              <span>{lang.name}</span>
-            </button>
+            <li key={lang.code}>
+              <button
+                type="button"
+                onClick={() => handleLanguageChange(lang.code)}
+                aria-current={lang.code === currentLocale ? "true" : undefined}
+                className={`w-full cursor-pointer px-4 py-2.5 text-left text-small transition-colors duration-150 hover:bg-surface ${
+                  lang.code === currentLocale ? "text-ink" : "text-muted"
+                }`}
+              >
+                {lang.name}
+              </button>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );

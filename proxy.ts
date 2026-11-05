@@ -11,9 +11,20 @@ const defaultLocale = "es";
 
 function getLocale(request: NextRequest) {
   const headers = Object.fromEntries(request.headers.entries());
-  const languages = new Negotiator({ headers }).languages();
+  // Negotiator returns ["*"] when the request carries no Accept-Language header,
+  // and match() throws on "*" because it is not a valid language tag.
+  const languages = new Negotiator({ headers })
+    .languages()
+    .filter((language) => language !== "*");
 
-  return match(languages, locales, defaultLocale);
+  if (languages.length === 0) return defaultLocale;
+
+  try {
+    return match(languages, locales, defaultLocale);
+  } catch {
+    // A malformed Accept-Language must not take the page down.
+    return defaultLocale;
+  }
 }
 
 export function proxy(request: NextRequest) {

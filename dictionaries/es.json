@@ -1,71 +1,117 @@
 {
   "metadata": {
-    "title": "Ruma — Pagos globales",
-    "description": "La app de pagos global donde tú eres el dueño"
+    "title": "Ruma — Envía dólares a la app de tu familia",
+    "description": "Envía dólares a tu familia en Latinoamérica, directo a su Yape, PIX o MercadoPago, y paga cualquier QR con tu saldo."
   },
   "nav": {
-    "features": "Funciones",
-    "how_to_start": "Cómo Empezar",
-    "security": "Seguridad",
-    "cta": "Recibir noticias",
-    "open_app": "Abrir app"
-  },
-  "pre-hero": {
-    "title": "Descubre cómo puedes recuperar el control de tu dinero"
+    "send": "Envíos",
+    "qr": "Pagos QR",
+    "how": "Cómo empezar",
+    "open_app": "Abrir Ruma",
+    "home": "Ruma, inicio"
   },
   "hero": {
-    "title_1": "Tu propia",
-    "title_2": "cuenta en dólares",
-    "subtitle": "La app de pagos globales donde tú eres el dueño. Dólares, autocustodia, sin bancos o intermediarios.",
-    "cta": "Recibir noticias",
-    "placeholder": "Ingresa tu correo",
-    "thank_you": "¡Estás en la lista! Te contactaremos pronto.",
-    "social_proof": "No compartimos tu correo con terceros",
-    "open_app": "Abrir app web",
-    "open_app_note": "Funciona en tu navegador · Sin instalar nada",
-    "or_divider": "o",
-    "open_app_badge": "En vivo"
+    "line_1": "Envía dólares",
+    "line_2": "a tu familia",
+    "lead": "Les llega directo a su Yape, PIX o MercadoPago, aunque no tengan Ruma.",
+    "cta": "Abrir Ruma",
+    "cta_note": "Funciona en tu navegador. No hay nada que instalar.",
+    "recipient": "Mamá",
+    "sent_title": "¡Enviado!",
+    "sent_to": "Mamá",
+    "countries": "{n} países"
   },
-  "features": {
-    "badge": "Funciones",
-    "title": "Compra y paga con dólares digitales de forma sencilla y segura",
-    "subtitle": "Ruma usa tecnología blockchain en una interfaz móvil simple",
-    "1_title": "Hecho para LATAM",
-    "1_desc": "Deposita desde bancos en Brasil, Argentina, México, Venezuela y Colombia.",
-    "2_title": "Autocustodia",
-    "2_desc": "Nunca custodiamos tu dinero, tú mantienes el control total.",
-    "3_title": "Costos más bajos",
-    "3_desc": "Nuestras transacciones: ¢. Otros canales: $$"
+  "rails": {
+    "countries": {
+      "br": {
+        "country": "Brasil",
+        "currency": "en reales"
+      },
+      "ar": {
+        "country": "Argentina",
+        "currency": "en pesos"
+      },
+      "ve": {
+        "country": "Venezuela",
+        "currency": "en bolívares"
+      },
+      "pe": {
+        "country": "Perú",
+        "currency": "en soles"
+      },
+      "ec": {
+        "country": "Ecuador",
+        "currency": "en dólares"
+      },
+      "bo": {
+        "country": "Bolivia",
+        "currency": "en bolivianos"
+      },
+      "co": {
+        "country": "Colombia",
+        "currency": "en pesos"
+      }
+    }
   },
-  "how_to_start": {
-    "badge": "Cómo Empezar",
-    "title": "Simplifica tus transacciones",
-    "subtitle": "De cero a experto en minutos.",
-    "1_title": "Abre Ruma",
-    "1_desc": "Ábrela en tu navegador y úsala al instante. También puedes instalarla en tu pantalla de inicio.",
-    "2_title": "Crea tu cuenta",
-    "2_desc": "Ingresa con tu biometría (huella/rostro) y tu cuenta está lista.",
-    "3_title": "Deposita y envía",
-    "3_desc": "Compra dólares digitales desde la app con tu banco local y empieza a hacer pagos.",
-    "1_cta": "Abrir app web",
-    "1_cta_note": "app.ruma.live"
+  "qr": {
+    "heading": "Paga con QR en la tienda",
+    "text": "Escanea el código y paga con tu saldo en dólares. Funciona con los QR de:",
+    "methods": [
+      "PIX",
+      "MercadoPago",
+      "DeUna",
+      "Yape",
+      "QR Simple"
+    ]
   },
-  "wallet": {
-    "badge": "Cripto",
-    "title": "Funciona como billetera",
-    "subtitle": "Para los entusiastas, la forma más fácil de recibir, holdear y enviar cripto en múltiples redes."
+  "how": {
+    "heading": "Empieza en cuatro pasos",
+    "steps": [
+      {
+        "title": "Ábrela en la web",
+        "body": "Entra a app.ruma.live desde el celular o la computadora."
+      },
+      {
+        "title": "Crea tu cuenta con tu biometría o correo",
+        "body": "Eliges cómo entrar: con tu correo electrónico o con la biometría de tu teléfono."
+      },
+      {
+        "title": "Carga dólares desde tu banco",
+        "body": "Desde Brasil, Argentina, México, Venezuela o Colombia."
+      },
+      {
+        "title": "Envía o paga",
+        "body": "A la app de tu familia, o un QR en la tienda."
+      }
+    ],
+    "chips": [
+      "app.ruma.live",
+      "Cuenta creada",
+      "+ US$ 100",
+      "¡Enviado!"
+    ],
+    "steps_label": "Pasos para empezar"
   },
   "partners": {
-    "title": "Nuestros Aliados",
-    "subtitle": "Tecnología que usamos y equipos en los que confiamos"
+    "lead": "Construido con"
   },
   "waitlist": {
-    "badge": "Novedades",
-    "title": "No te pierdas lo que viene",
-    "subtitle": "Te escribimos cuando haya nuevas funciones, nuevos países y la app en las tiendas.",
-    "cta": "Recibir noticias",
-    "placeholder": "Ingresa tu correo",
-    "thank_you": "¡Estás en la lista! Te contactaremos pronto."
+    "heading": "Entérate de lo nuevo",
+    "text": "Te escribimos cuando lleguen países nuevos y las apps de las tiendas. No compartimos tu correo con nadie.",
+    "placeholder": "tu@correo.com",
+    "input_label": "Tu correo",
+    "cta": "Avísame",
+    "thank_you": "¡Listo! Te escribimos cuando haya novedades.",
+    "error": "No pudimos guardar tu correo. Revisa tu conexión e inténtalo de nuevo.",
+    "sending": "Enviando…"
+  },
+  "footer": {
+    "invite": "Envía tu primer dólar hoy",
+    "cta": "Abrir Ruma",
+    "links_label": "Ruma en otros lugares",
+    "link_contact": "Habla con el fundador",
+    "link_beta": "Beta para Android",
+    "rights": "Todos los derechos reservados."
   },
   "beta_banner": {
     "prefix": "¿En Android?",
@@ -98,14 +144,19 @@
     "feedback_body": "Cuéntanos — cada reporte ayuda.",
     "feedback_cta": "Enviar feedback"
   },
-  "footer": {
-    "tagline": "Tu propia cuenta en dólares.",
-    "links_product": "Producto",
-    "link_features": "Funciones",
-    "link_how": "Cómo Empezar",
-    "link_beta": "Beta para Android",
-    "links_company": "Compañía",
-    "link_contact": "Contacta al fundador",
-    "copyright": "© 2025 Ruma. Todos los derechos reservados."
+  "methods": {
+    "heading": "Así le llega a tu familia",
+    "sub": "Tú envías dólares y tu familia los recibe en su moneda, en la app que ya usa. Ellos no necesitan Ruma.",
+    "question": "¿Dónde está tu familia?",
+    "you": "Tú",
+    "you_sub": "en dólares",
+    "ruma_sub": "lo convierte y lo envía",
+    "reference": "*Valor de referencia"
+  },
+  "invest": {
+    "badge": "Próximamente",
+    "heading": "Inversiones en la app",
+    "text": "Pronto vas a poder hacer crecer tus dólares desde Ruma, en el mismo lugar donde envías y pagas.",
+    "action": "Avísame cuando esté listo"
   }
 }

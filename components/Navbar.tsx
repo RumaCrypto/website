@@ -1,101 +1,48 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { useTranslations } from "@/context/translations/TranslationsContext";
 import LanguageSelector from "@/components/LanguageSelector";
 import { appUrl } from "@/lib/appConfig";
 
-export default function Navbar({ lang }: { lang: string }) {
-  const { scrollY } = useScroll();
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    setIsDark(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-
-  const darkBg = useTransform(scrollY, [0, 80], ["rgba(9,9,11,0)", "rgba(9,9,11,0.85)"]);
-  const lightBg = useTransform(scrollY, [0, 80], ["rgba(255,255,255,0)", "rgba(255,255,255,0.85)"]);
-  const bg = isDark ? darkBg : lightBg;
-  const borderOpacity = useTransform(scrollY, [0, 80], [0, 1]);
+/** `inverse` sits on the blue hero of the landing; the default sits on white. */
+export default function Navbar({ lang, tone = "ink" }: { lang: string; tone?: "ink" | "inverse" }) {
   const t = useTranslations("nav");
+  const inverse = tone === "inverse";
 
   const navLinks = [
-    { label: t("features"), href: `/${lang}#features` },
-    { label: t("how_to_start"), href: `/${lang}#how-to-start` },
+    { label: t("send"), href: `/${lang}#envios` },
+    { label: t("qr"), href: `/${lang}#qr` },
+    { label: t("how"), href: `/${lang}#empezar` },
   ];
 
   return (
-    <motion.header
-      style={{ backgroundColor: bg }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md"
-    >
-      <motion.div
-        style={{ opacity: borderOpacity }}
-        className="absolute bottom-0 left-0 right-0 h-px bg-border"
-      />
-      <div className="max-w-6xl mx-auto px-2 md:px-6 h-16 flex items-center justify-between">
-        <Link href={`/${lang}`} className="flex items-center">
-          <Image
-            src="/logo-full.svg"
-            alt="Ruma"
-            width={80}
-            height={32}
-            className="h-8 w-auto dark:hidden"
-          />
-          <Image
-            src="/logo-full-white.svg"
-            alt="Ruma"
-            width={80}
-            height={32}
-            className="h-7 w-auto hidden dark:block"
-          />
-        </Link>
+    <header className={`frame nav ${inverse ? "nav--inverse" : ""}`}>
+      <Link href={`/${lang}`} aria-label={t("home")} className="flex items-center">
+        <Image
+          src={inverse ? "/logo-full-white.svg" : "/logo-full.svg"}
+          alt="Ruma"
+          width={84}
+          height={32}
+          priority
+          className="h-9 w-auto"
+        />
+      </Link>
 
-        <div className="flex items-center gap-1 md:gap-3">
-
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-sm text-muted hover:text-text transition-colors duration-200"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          <a
-            href={`/${lang}#waitlist`}
-            className="hidden sm:inline-flex items-center px-2 py-2 text-sm text-muted hover:text-text transition-colors duration-200"
-          >
-            {t("cta")}
-          </a>
-
-          <LanguageSelector currentLocale={lang} />
-
-          <a
-            href={appUrl}
-            className="inline-flex items-center gap-2 px-2 sm:px-4 py-2 text-sm font-medium rounded-lg bg-accent text-white hover:bg-[#3a7cff] transition-colors duration-200"
-          >
-            <Image
-              src="/app-icon.svg"
-              alt=""
-              width={18}
-              height={18}
-              className="w-[18px] h-[18px] rounded-[4px]"
-            />
-            {t("open_app")}
-          </a>
-        </div>
+      <div className="nav__right">
+        <nav className="nav__links">
+          {navLinks.map((item) => (
+            <a key={item.href} href={item.href} className="nav__link">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <LanguageSelector currentLocale={lang} tone={inverse ? "inverse" : "ink"} />
+        <a href={appUrl} className={`button button--small ${inverse ? "button--white" : "button--ink"}`}>
+          {t("open_app")}
+        </a>
       </div>
-    </motion.header>
+    </header>
   );
 }
